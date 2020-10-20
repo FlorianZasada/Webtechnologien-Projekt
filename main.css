@@ -3,7 +3,7 @@ html {
 }
 
 div {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 a:link {
@@ -16,13 +16,23 @@ a:visited {
     text-decoration-style: None;
 }
 
+.topnav {
+    display: inline-block;
+    width: 100%;
+}
+
 .topnav:hover {
-    background: #ffffff;
+    background: #f6f6f6;
 }
 
 #nav_logo {
     width: 50px;
     height: 65px;
+    position: relative;
+    float: right;
+    right: 0px;
+    /*margin-bottom: -20px;
+    z-index: 3;*/
 }
 
 #banner {
@@ -36,6 +46,31 @@ a:visited {
     width: 100%;
     position: absolute;
     bottom: -140px;
+}
+
+#mainbody {
+    width: 100%;
+}
+
+#content {
+    width: 50%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: inline-block;
+}
+
+#description {
+    padding-bottom: 20px;
+}
+
+.article {
+    width: 100%;
+}
+
+.sidebar {
+    display: inline-block;
+    width: 20%;
+    float: right;
 }
 
 .bottomnav {
