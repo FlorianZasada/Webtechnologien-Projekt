@@ -1,7 +1,29 @@
 html {
-    background: #f3f3f3;
+    background: #ffffff;
+}
+
+a:link {
+    color: #000000;
+    text-decoration-style: None;
+}
+
+a:visited {
+    color: #000000;
+    text-decoration-style: None;
 }
 
 .topnav:hover {
-    background: #555555;
+    background: #ffffff;
 }
+
+#nav_logo {
+    width: "50px";
+    height: "60px";
+}
+
+.bottomnav {
+    background: #888888;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+} 
