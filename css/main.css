@@ -2,7 +2,11 @@ html {
     background: #ffffff;
 }
 
-div {
+body {
+    margin: 0px;
+}
+
+* {
     /*border: 1px solid black;*/
 }
 
@@ -16,12 +20,19 @@ a:visited {
     text-decoration-style: None;
 }
 
-.topnav {
-    display: inline-block;
-    width: 100%;
+#outertopnav {
+    width:100%;
+    display: flex;
+    justify-content: center;
 }
 
-.topnav:hover {
+#topnav {
+    display: inline-block;
+    margin: 0 auto;
+    width: 95%;
+}
+
+#topnav:hover {
     background: #f6f6f6;
 }
 
@@ -48,8 +59,14 @@ a:visited {
     bottom: -140px;
 }
 
+#outermainbody {
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
 #mainbody {
-    width: 100%;
+    width: 95%;
 }
 
 #content {
