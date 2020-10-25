@@ -1,24 +1,81 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/startseite/bootstrap.min.css">
     <link rel="stylesheet" href="css/startseite/main.css">
     <title>Titel</title>
   </head>
   
   <body>
-    <div class="topnav">
-        <a href="#home">Startseite</a>
-        <a href="#news">News</a>
-        <a href="#veranstaltungen">Leben & Freizeit</a>
-        <a href="#karte">Anfahrt</a>
-        <a href="#contact">Kontakt</a>
-        <img id="nav_logo" src="pics/Wappen_Birgel_Dueren.jpg">
-    </div>
-      
-    <div id="banner">
-          <img src="pics/Dueren_Banner.jpg">
-    </div>
+  
+	<!-- Navigationsleiste -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">
+			<img src="pics/Wappen_Birgel_Dueren.jpg" width="46" height="60" class="d-inline-block align-top" alt="">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Startseite<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Leben und Freizeit
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="#">Veranstaltungen</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<a class="dropdown-item" href="#">Something else here</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">News</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Karte</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Kontakt</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	
+	<!-- Slideshow -->
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+			  <img class="d-block w-100" src="pics/carousel1.jpg" alt="First slide">
+			</div>
+			<div class="carousel-item">
+			  <img class="d-block w-100" src="pics/carousel2.jpg" alt="Second slide">
+			</div>
+			<div class="carousel-item">
+			  <img class="d-block w-100" src="pics/carousel3.jpg" alt="Third slide">
+			</div>
+		</div>
+		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Zurück</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Vor</span>
+		</a>
+	</div>
       
     <div id="mainbody"> 
         <div id="content">
@@ -46,5 +103,8 @@
             <a href="#kontakt">Kontakt</a>
         </div>
     </footer>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
