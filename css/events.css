@@ -1,16 +1,13 @@
-.card {
-    width: 20%;
+.spacing {
+    margin-bottom: 40px;
 }
 
 #content {
     width: 100%;
     padding: 0;
-    display: flex;
-    flex-flow: row wrap;
 }
 
 /*Vorschlag*/
 #description {
     text-align: center;
-    flex: 0 0 100%;
 }
