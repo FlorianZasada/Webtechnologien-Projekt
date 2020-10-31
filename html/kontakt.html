@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Kontaktseite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="..\css\bootstrap_original\css\bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/startseite/main.css" />
+  </head>
+  
+  <body>
+    <div class="topnav">
+        <a href="#home">Startseite</a>
+        <a href="#news">News</a>
+        <a href="#veranstaltungen">Leben & Freizeit</a>
+        <a href="#karte">Anfahrt</a>
+        <a href="#contact">Kontakt</a>
+        <img id="nav_logo" src="pics/Wappen_Birgel_Dueren.jpg">
+    </div>
+      
+    <div id="banner">
+          <img src="pics/Dueren_Banner.jpg">
+    </div>
+
+        <form>    
+            <div class="container">
+                <h1> Kontaktformular </h1><br>  
+                 <h3>Ihre Nachricht an die Gemeindevertretung </h3><br>
+
+             <div class="row">
+                <div class="col-md-12">
+                    <p class="text-muted">
+                        <strong>*</strong> = Pflichtfelder
+                    </p>
+                </div>
+             </div><br>    
+
+                 <div class="messages"></div>
+
+                <div class="controls">
+
+            <div class="row">
+                    <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_name">Vorname *</label>
+                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Bitte hier Vornamen eingeben" required="required" data-error="Firstname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+                        
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_lastname">Nachname *</label>
+                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Bitte hier Nachnamen eingeben" required="required" data-error="Lastname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+         </div>
+                    
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_email">Email *</label>
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Bitte hier Email eingeben" required="required" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="telefon">Telefon (optional)</label>
+                    <input id="form_telefon" type="tel" name="telefon" class="form-control" placeholder="Bitte hier Telefonnummer eingeben" required="required" date-error="Valid telefon is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+             </div>     
+        </div>
+            
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_message">Nachricht *</label>
+                    <textarea id="form_message" name="Nachricht" class="form-control" placeholder="Ich möchte folgendes sagen" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>    
+            
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+            
+                    <input type="checkbox" name="datenschutz" value="check">
+            
+                        Ich habe die Informationen zum Datenschutz gelesen. *    
+                </div>
+                
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send" value="→ Senden">
+            </div>
+        </div>
+    </div>
+   </form><br><br>
+
+     <div class="sidebar">Eine Sidebar für was auch immer man hier reinschreiben möchte</div>
+
+    
+    <footer>
+        <div class="bottomnav">
+            <a href="#impressum">Impressum</a>
+            <a href="#datenschutz">Datenschutz</a>
+            <a href="#kontakt">Kontakt</a>
+        </div>
+    </footer>
+  </body>
+</html>
