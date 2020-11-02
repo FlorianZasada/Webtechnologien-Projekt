@@ -96,3 +96,8 @@ a:visited {
     padding-bottom: 40px;
     text-align: center;
 } 
+
+.preview-card {
+    max-width: 300px;
+    min-width: 100px;
+}
