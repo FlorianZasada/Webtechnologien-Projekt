@@ -80,6 +80,7 @@ a:visited {
     padding-bottom: 20px;
 }
 
+
 .article {
     width: 100%;
 }
@@ -98,6 +99,15 @@ a:visited {
 } 
 
 .preview-card {
-    max-width: 300px;
-    min-width: 100px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+@media (max-width: 400px) {
+  .preview-card {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
 }
