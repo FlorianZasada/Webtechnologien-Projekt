@@ -99,9 +99,31 @@ a:visited {
 } 
 
 .preview-card {
+    min-width: 200px;
     margin-bottom: 15px;
     margin-top: 15px;
 }
+
+.preview-card a .card {
+    background-color: #fdfdfd;
+}
+
+.preview-card a .card:hover {
+    /*box-shadow: 2px 2px 8px #888888;*/
+    box-shadow: 0px 0px 10px #666;
+    border-color: #aaa;
+    background-color: #fff;
+}
+
+.preview-card-title {
+    text-decoration: underline;
+}
+
+/*
+.preview-link:hover {
+    text-decoration: none;
+}
+*/
 
 @media (max-width: 400px) {
   .preview-card {
