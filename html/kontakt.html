@@ -1,26 +1,55 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Kontaktseite</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
+  <head>      
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap_original/css/bootstrap.min.css" />
+      
     <link rel="stylesheet" href="../css/startseite/main.css" />
+    <link rel="stylesheet" href="../css/events.css" />
+
+    <title>Birgel - Kontakt</title>
   </head>
   
   <body>
-    <div class="topnav">
-        <a href="#home">Startseite</a>
-        <a href="#news">News</a>
-        <a href="#veranstaltungen">Leben & Freizeit</a>
-        <a href="#karte">Anfahrt</a>
-        <a href="#contact">Kontakt</a>
-        <img id="nav_logo" src="pics/Wappen_Birgel_Dueren.jpg">
-    </div>
-      
-    <div id="banner">
-          <img src="pics/Dueren_Banner.jpg">
-    </div>
+    <!-- Navigationsleiste -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">
+			<img src="../pics/Wappen_Birgel_Dueren.png" width="46" height="60" class="d-inline-block align-top" alt="">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Startseite<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Leben und Freizeit
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="#">Veranstaltungen</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<a class="dropdown-item" href="#">Something else here</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">News</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Karte</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Kontakt</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 
         <form>    
             <div class="container">
@@ -37,7 +66,7 @@
 
                  <div class="messages"></div>
 
-                <div class="controls">
+                <div class="controls"></div>
 
             <div class="row">
                     <div class="col-md-6">
@@ -99,6 +128,7 @@
                 <input type="submit" class="btn btn-success btn-send" value="→ Senden">
             </div>
         </div>
+    </div>
     </div>
    </form><br><br>
 
