@@ -2,7 +2,11 @@ html {
     background: #ffffff;
 }
 
-div {
+body {
+    margin: 0px;
+}
+
+* {
     /*border: 1px solid black;*/
 }
 
@@ -16,12 +20,19 @@ a:visited {
     text-decoration-style: None;
 }
 
-.topnav {
-    display: inline-block;
-    width: 100%;
+#outertopnav {
+    width:100%;
+    display: flex;
+    justify-content: center;
 }
 
-.topnav:hover {
+#topnav {
+    display: inline-block;
+    margin: 0 auto;
+    width: 95%;
+}
+
+#topnav:hover {
     background: #f6f6f6;
 }
 
@@ -48,8 +59,14 @@ a:visited {
     bottom: -140px;
 }
 
+#outermainbody {
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
 #mainbody {
-    width: 100%;
+    width: 95%;
 }
 
 #content {
@@ -62,6 +79,7 @@ a:visited {
 #description {
     padding-bottom: 20px;
 }
+
 
 .article {
     width: 100%;
@@ -79,3 +97,39 @@ a:visited {
     padding-bottom: 40px;
     text-align: center;
 } 
+
+.preview-card {
+    min-width: 200px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.preview-card a .card {
+    background-color: #fdfdfd;
+}
+
+.preview-card a .card:hover {
+    /*box-shadow: 2px 2px 8px #888888;*/
+    box-shadow: 0px 0px 10px #666;
+    border-color: #aaa;
+    background-color: #fff;
+}
+
+.preview-card-title {
+    text-decoration: underline;
+}
+
+/*
+.preview-link:hover {
+    text-decoration: none;
+}
+*/
+
+@media (max-width: 400px) {
+  .preview-card {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
