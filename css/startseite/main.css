@@ -99,7 +99,7 @@ a:visited {
 } 
 
 .preview-card {
-    min-width: 200px;
+    min-width: 150px;
     margin-bottom: 15px;
     margin-top: 15px;
 }
@@ -117,6 +117,10 @@ a:visited {
 
 .preview-card-title {
     text-decoration: underline;
+}
+
+.prewview-card-body {
+    padding: 0.6em;
 }
 
 /*
