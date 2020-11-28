@@ -6,6 +6,14 @@ body {
     margin: 0px;
 }
 
+#footer-copyright{
+    background: #A6A6A6;
+}
+
+#footer-menu{
+    background: #BFBFBF;
+}
+
 * {
     /*border: 1px solid black;*/
 }
