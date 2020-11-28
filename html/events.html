@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../css/startseite/bootstrap.css" />
+    <link rel="stylesheet" href="../css/bootstrap_original/css/bootstrap.css" />
+
+    <!-- MDI CSS -->
+    <link rel="stylesheet" href="../css/mdi/css/materialdesignicons.min.css" />
       
     <link rel="stylesheet" href="../css/startseite/main.css" />
     <link rel="stylesheet" href="../css/events.css" />
@@ -88,82 +91,132 @@
                 <h3>Hier werden alle lokalen Veranstaltungen angezeigt!</h3>
             </div>
 
-            <div class="container-fluid">
-                <div class="row spacing justify-content-around">
-                    <div class="card col-3">
-                        <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
-                        class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div> 
-                    <div class="card col-3">
-                        <img src="https://media.istockphoto.com/photos/winning-success-man-happy-ecstatic-celebrating-being-a-winner-dynamic-picture-id941370476"
-                        class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card col-3">
-                        <img src="https://media.istockphoto.com/photos/portrait-of-businessman-in-glasses-holding-tablet-picture-id1011244876"
-                        class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div> 
-                </div>
-                <div class="row spacing justify-content-around">
-                    <div class="card col-3">
-                        <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
-                        class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div> 
-                    <div class="card col-3">
-                        <img src="https://media.istockphoto.com/photos/winning-success-man-happy-ecstatic-celebrating-being-a-winner-dynamic-picture-id941370476"
-                        class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="input-group d-flex justify-content-center">
+            
+                <input id="search-bar" type="text" class="form-control" placeholder="Suche" aria-label="Suche" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <div class="dropdown">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Kategorien
+                        </a>
+            
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <span class="dropdown-item active">Kategorie 1</span>
+                            <span class="dropdown-item">Kategorie 2</span>
+                            <span class="dropdown-item">Kategorie 3</span>
                         </div>
                     </div>
                 </div>
-                <div class="row spacing justify-content-around">
-                    <div class="card col-3">
-                        <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
-                        class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+            
+                <button class="btn" type="button" id="search-button"><span class="mdi mdi-magnify"></span></button>
+            </div>
+
+            <div id="card-container" class="container-fluid">
+                <div class="row justify-content-around">
+                    <div class="col-lg-3 col-md-5">
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
+                            class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn">Go somewhere</a>
+                            </div>
                         </div>
                     </div> 
-                    <div class="card col-3">
-                        <img src="https://media.istockphoto.com/photos/winning-success-man-happy-ecstatic-celebrating-being-a-winner-dynamic-picture-id941370476"
-                        class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="col-lg-3 col-md-5">
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
+                            class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-lg-3 col-md-5">
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                    content.</p>
+                                <a href="#" class="btn">Go somewhere</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="card col-3">
-                        <img src="https://media.istockphoto.com/photos/portrait-of-businessman-in-glasses-holding-tablet-picture-id1011244876"
-                        class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="col-lg-3 col-md-5">
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                    content.</p>
+                                <a href="#" class="btn">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5">
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                    content.</p>
+                                <a href="#" class="btn">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5">
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                    content.</p>
+                                <a href="#" class="btn">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5">
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                    content.</p>
+                                <a href="#" class="btn">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5">
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                    content.</p>
+                                <a href="#" class="btn">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5">
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                    content.</p>
+                                <a href="#" class="btn">Go somewhere</a>
+                            </div>
                         </div>
                     </div>
                 </div>
