@@ -1,0 +1,13 @@
+.spacing {
+    margin-bottom: 40px;
+}
+
+#content {
+    width: 100%;
+    padding: 0;
+}
+
+/*Vorschlag*/
+#description {
+    text-align: center;
+}
