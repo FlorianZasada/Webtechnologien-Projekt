@@ -1,5 +1,37 @@
-.spacing {
-    margin-bottom: 40px;
+.card {
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin: 60px 0;
+    padding: 0 20px;
+}
+
+.btn {
+    background-color: #2ecc71;
+    color: white !important;
+    border-radius: 0;
+}
+
+.btn:hover {
+    background-color: #27ae60;
+}
+
+#mainbody {
+    margin: 0;
+    width: 100%;
+}
+
+#search-bar {
+    max-width: 1000px;
+    border-radius: 0;
+}
+
+#card-container {
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 #content {
@@ -7,7 +39,23 @@
     padding: 0;
 }
 
-/*Vorschlag*/
 #description {
+    margin-top: 50px;
     text-align: center;
+}
+
+#search-button {
+    border-left: 1px solid rgba(0,0,0,0.25);
+}
+
+@media(max-width: 992px) {
+    #card-container {
+        padding: 0 50px;
+    }
+}
+
+@media(min-width: 992.1px) {
+    .card {
+        margin: 20px 20px;
+    }
 }
