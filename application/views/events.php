@@ -52,11 +52,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <a class="nav-link" href="<?php echo base_url();?>kontakt">Kontakt</a>
                     </li>
                 </ul>
+                <?php if(!$this->session->userdata("id")):?>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>login">Login</a>
                     </li>
                 </ul>
+                <?php else:?>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url();?>home/logout">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url();?>admin">Adminpanel</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    <?=$this->session->userdata('name');?> 
+                </span>
+                <?php endif;?>
             </div>
         </div>
 	</nav>

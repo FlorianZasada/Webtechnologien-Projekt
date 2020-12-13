@@ -59,11 +59,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>home/logout">Logout</a>
                     </li>
+                    <?php if($this->session->userdata("admin")):?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url();?>admin">Adminpanel</a>
+                    </li>
+                    <?php endif;?>
                 </ul>
-                <?php endif;?>
                 <span class="navbar-text">
                     <?=$this->session->userdata('name');?> 
                 </span>
+                <?php endif;?>
             </div>
         </div>
 	</nav>
