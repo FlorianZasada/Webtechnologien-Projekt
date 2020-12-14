@@ -4,7 +4,7 @@ $(function() {
   //Event um das Klicken auf dem Select zu erkennne und die Daten aufzurfrischen
   $('#inputState').click(function(event) {
     open = !open;
-    console.log(open)
+
     if(open)
       $.get('admin/userLastNames', function(lastnames) {
         lastnames = JSON.parse(lastnames);
