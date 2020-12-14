@@ -1,16 +1,34 @@
 $(function() {
-$('#inputState').click(function(event) {
-    $.get('admin/userLastNames', (lastnames, status) => {
-      if(status === "success") {
+  var open = false;
+
+  //Event um das Klicken auf dem Select zu erkennne und die Daten aufzurfrischen
+  $('#inputState').click(function(event) {
+    open = !open;
+    console.log(open)
+    if(open)
+      $.get('admin/userLastNames', function(lastnames) {
         lastnames = JSON.parse(lastnames);
         $('#inputState').empty().append($('<option></option>').text('Auswählen...'));
-        for(let i = 0; i < lastnames.length; i++)
+
+        for(var i = 0; i < lastnames.length; i++)
           $('#inputState').append($('<option></option>').text(lastnames[i].lastname).val(lastnames[i].lastname));
-      }
+      });
     });
-  });
+
+    //Event um direkt den ausgewählten User in die Tabelle zu laden
+    $('#inputState').change(function(event) {
+      $.post('admin/userByLastName', {lastname: $(this).val()}, function(data) {
+        data = JSON.parse(data);
+        var tableRow = $('tbody > tr');
+        tableRow.empty();
+
+        for(var field in data)
+          tableRow.append($(field === 'id' ? '<th></th>' : '<td></td>').text(data[field]));
+      });
+    });
 });
 
+//"Normale" JavaScript Variante
 /*var open = false;
 var input = document.getElementById('inputState');
 

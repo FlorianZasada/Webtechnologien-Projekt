@@ -29,9 +29,18 @@ class Admin extends CI_Controller {
 		$this->load->view('admin_page', $data);
 	}
 
+	//Funktion für alle Usernachnamen (Wird per Route erreicht)
   public function userLastNames() {
     $data = $this->admin_model->getUserLastNames();
     
     echo json_encode($data);
   }
+
+	//Funktion für alle User per Nachmnamen (Wird per Route erreicht)
+	public function userByLastName() {
+		$postdata = $this->input->post('lastname');
+		$data = $this->admin_model->getUserByLastName($postdata);
+
+		echo json_encode($data[0]);
+	}
 }
