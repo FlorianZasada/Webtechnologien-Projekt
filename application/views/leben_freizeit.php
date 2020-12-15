@@ -51,11 +51,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <a class="nav-link" href="<?php echo base_url();?>kontakt">Kontakt</a>
                     </li>
                 </ul>
+                <?php if(!$this->session->userdata("id")):?>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>login">Login</a>
                     </li>
                 </ul>
+                <?php else:?>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url();?>home/logout">Logout</a>
+                    </li>
+                    <?php if($this->session->userdata("admin")):?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url();?>admin">Adminpanel</a>
+                    </li>
+                    <?php endif;?>
+                </ul>
+                <span class="navbar-text">
+                    <?=$this->session->userdata('name');?> 
+                </span>
+                <?php endif;?>
             </div>
         </div>
 	</nav>
@@ -138,7 +154,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     
     <footer>
         <!-- Grid row-->
-    <div id="footer-menu" class="row text-center d-flex justify-content-center pt-4">
+    <div id="footer-menu" class="text-center d-flex justify-content-center pt-4">
 
           <!-- Grid column -->
           <div class="col-md-2 mb-3">

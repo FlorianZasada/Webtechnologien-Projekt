@@ -19,7 +19,7 @@ class Login_model extends CI_Model
     $this->db->where('email', $email);
     
     //AUFGABE: speichern Sie die Abfrage in $query
-    $query = $this->db->get('carshare_users'); 
+    $query = $this->db->get('users'); 
     
     /**
      * Auswerten der Abfrage und Suche nach dem Passwort-Hash
@@ -43,6 +43,7 @@ class Login_model extends CI_Model
                 if(password_verify($password, $hash)){
                     $this->session->set_userdata('id', $row->id);
                     $this->session->set_userdata('name', $row->name);
+                    if(boolval($row->is_admin)) $this->session->set_userdata('admin', true);
                 }else{
                     return 'Wrong Password';
                 }

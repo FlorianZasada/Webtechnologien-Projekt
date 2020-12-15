@@ -48,7 +48,7 @@ class Register extends CI_Controller {
     //Regeln setzen
     $this->form_validation->set_rules('user_name', 'Name', 'required|trim');
     $this->form_validation->set_rules('user_lastname', 'Nachname', 'required|trim');
-    $this->form_validation->set_rules('user_email', 'Email Address', 'required|trim|valid_email|is_unique[carshare_users.email]');
+    $this->form_validation->set_rules('user_email', 'Email Address', 'required|trim|valid_email|is_unique[users.email]');
     $this->form_validation->set_rules('user_password', 'Password', 'required');
     
     //Überprüfung durchführen

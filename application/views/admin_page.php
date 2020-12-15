@@ -4,21 +4,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!doctype html>
 <html>
-  <head>      
-    <!-- Required meta tags -->
+  <head>
+      
+	<!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/bootstrap.css" />
-      
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/main.css" />
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/events.css" />
-    <title>Birgel - Kontakt</title>
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/main.css">
+    <title>Birgel - Startseite</title>
   </head>
   
   <body>
-    <!-- Navigationsleiste -->
+  
+	<!-- Navigationsleiste -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -44,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li class="nav-item">
                         <a class="nav-link" href="#">Karte</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>kontakt">Kontakt</a>
                     </li>
                 </ul>
@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>home/logout">Logout</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ml-auto active">
                         <a class="nav-link" href="<?php echo base_url();?>admin">Adminpanel</a>
                     </li>
                 </ul>
@@ -70,89 +70,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
 	</nav>
+  
+  <!-- Main Content -->
+  <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div id="description">
+                    <h1>Adminpanel</h1>
+                </div>
 
-        <form>    
-            <div class="container">
-                <h1> Kontaktformular </h1><br>  
-                 <h3>Ihre Nachricht an die Gemeindevertretung </h3><br>
-
-             <div class="row">
-                <div class="col-md-12">
-                    <p class="text-muted">
-                        <strong>*</strong> = Pflichtfelder
-                    </p>
+                <div class="article">
+                    <p>Nutzerverwaltung und allgemeine Einstellungen</p>
                 </div>
-             </div><br>    
-
-                 <div class="messages"></div>
-
-                <div class="controls"></div>
-
-            <div class="row">
-                    <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_name">Vorname *</label>
-                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Bitte hier Vornamen eingeben" required="required" data-error="Firstname is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-                        
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_lastname">Nachname *</label>
-                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Bitte hier Nachnamen eingeben" required="required" data-error="Lastname is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-         </div>
-                    
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_email">Email *</label>
-                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Bitte hier Email eingeben" required="required" data-error="Valid email is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-            
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="telefon">Telefon (optional)</label>
-                    <input id="form_telefon" type="tel" pattern='^\+?\d{0,13}' name="telefon" class="form-control" placeholder="Bitte hier Telefonnummer eingeben">
-                    <div class="help-block with-errors"></div>
-                </div>
-             </div>     
-        </div>
-            
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label for="form_message">Nachricht *</label>
-                    <textarea id="form_message" name="Nachricht" class="form-control" placeholder="Ich möchte folgendes sagen" rows="4" required="required" data-error="Please, leave us a message."></textarea>
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-        </div>    
-            
-        
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-            
-                    <input type="checkbox" required name="datenschutz" value="check">
-            
-                        Ich habe die Informationen zum Datenschutz gelesen. *    
-                </div>
-                
-            <div class="col-md-12">
-                <input type="submit" class="btn btn-success btn-send" value="→ Senden">
             </div>
         </div>
+        <form>
+            <div class="form-group col-md-4">
+            <label for="inputState">Benutzer auswählen:</label>
+            <select id="inputState" class="form-control">
+                <option selected>Auswählen...</option>
+                <?php foreach($lastnames as $row):?>
+                <option><?=$row->lastname;?></option>
+                <?php endforeach;?>
+            </select>
+        </div>
+        </form>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Nachname</th>
+                <th scope="col">E-Mail</th>
+                <th scope="col">E-Mail verifiziert?</th>
+                <th scope="col">Ist Administrator?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    </div>
-   </form><br><br>
-    
-    <footer class="bottom-footer">
+
+  <footer class="bottom-footer">
         <!-- Grid row-->
     <div id="footer-menu" class="text-center d-flex justify-content-center pt-4">
 
@@ -185,5 +146,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <a href="https://birgel.de/"> birgel.de</a>
         </div>
     </footer>
+    <script src="<?=base_url();?>assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="<?=base_url();?>assets/js/admin_page.js"></script>
   </body>
 </html>
