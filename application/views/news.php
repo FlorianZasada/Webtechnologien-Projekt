@@ -245,10 +245,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
     
     <footer>
-        <div class="bottomnav">
-            <a href="#impressum">Impressum</a>
-            <a href="#datenschutz">Datenschutz</a>
-            <a href="#kontakt">Kontakt</a>
+        <!-- Grid row-->
+    <div id="footer-menu" class="text-center d-flex justify-content-center pt-4">
+
+          <!-- Grid column -->
+          <div class="col-md-2 mb-3">
+              <h6 class="text-uppercase">
+                  <a href="#!">Impressum</a>
+              </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 mb-3">
+              <h6 class="text-uppercase">
+                  <a href="#!">Datenschutz</a>
+              </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 mb-3">
+            <h6 class="text-uppercase">
+              <a href="<?php echo base_url();?>kontakt">Kontakt</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+        </div>
+        
+        <div id="footer-copyright" class="footer-copyright text-center py-3" >© 2020 Copyright:
+            <a href="https://birgel.de/"> birgel.de</a>
         </div>
     </footer>
       

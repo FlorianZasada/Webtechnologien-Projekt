@@ -154,7 +154,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     
     <footer>
         <!-- Grid row-->
-    <div id="footer-menu" class="row text-center d-flex justify-content-center pt-4">
+    <div id="footer-menu" class="text-center d-flex justify-content-center pt-4">
 
           <!-- Grid column -->
           <div class="col-md-2 mb-3">

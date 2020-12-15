@@ -11,6 +11,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title>Welcome to CarShare</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/main.css" />
   </head>
   <body>
 <!--Main Navigation-->
@@ -75,7 +77,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div class="container">
   <br />
-  <h3 align="center">Registriere Dich bei CarShare!</h3>
+  <h3 align="center">Registriere Dich bei Birgel.de!</h3>
   <br />
   <div class="card card-default">
    <div class="card-header">Anmeldung</div>
@@ -122,15 +124,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  </div>
 
 </main>
-<footer class="page-footer font-small blue pt-4">
-  <!-- Copyright & Impressum -->
-  <div class="footer-copyright text-center py-3">© 2019 Copyright:
-    <a href="...">CarShare</a>
-    <a href="...">Impressum</a>    
-  </div>
-  <!-- Copyright -->    
+<footer>
+        <!-- Grid row-->
+    <div id="footer-menu" class="text-center d-flex justify-content-center pt-4">
 
-</footer>
+          <!-- Grid column -->
+          <div class="col-md-2 mb-3">
+              <h6 class="text-uppercase">
+                  <a href="#!">Impressum</a>
+              </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 mb-3">
+              <h6 class="text-uppercase">
+                  <a href="#!">Datenschutz</a>
+              </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 mb-3">
+            <h6 class="text-uppercase">
+              <a href="<?php echo base_url();?>kontakt">Kontakt</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+        </div>
+        
+        <div id="footer-copyright" class="footer-copyright text-center py-3" >© 2020 Copyright:
+            <a href="https://birgel.de/"> birgel.de</a>
+        </div>
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -142,7 +168,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html>
 <head>
- <title>Registriere Dich bei CarShare!</title>
+ <title>Registriere Dich auf Birgel.de!</title>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
 </head>
 

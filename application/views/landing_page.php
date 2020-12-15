@@ -124,7 +124,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-lg-8">
                 <div class="row justify-content-between">
                     <div class="col-4 preview-card">
-                        <a href="./html/news.html">
+                        <a href="<?php echo base_url();?>news">
                             <div class="card">
                                 <img src="<?php echo base_url();?>/assets/pics/Dueren_Banner.jpg" class="card-img-top" alt="...">
                                 <div class="card-body prewview-card-body">
@@ -135,7 +135,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </a>
                     </div>
                     <div class="col-4 preview-card">
-                        <a href="./html/events.html">
+                        <a href="<?php echo base_url();?>events">
                             <div class="card">
                                 <img src="<?php echo base_url();?>assets/pics/Dueren_Banner.jpg" class="card-img-top" alt="...">
                                 <div class="card-body prewview-card-body">
@@ -163,7 +163,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
     <footer>
         <!-- Grid row-->
-    <div id="footer-menu" class="row text-center d-flex justify-content-center pt-4">
+    <div id="footer-menu" class="text-center d-flex justify-content-center pt-4">
 
           <!-- Grid column -->
           <div class="col-md-2 mb-3">
@@ -184,7 +184,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <!-- Grid column -->
           <div class="col-md-2 mb-3">
             <h6 class="text-uppercase">
-              <a href="#!">Kontakt</a>
+              <a href="<?php echo base_url();?>kontakt">Kontakt</a>
             </h6>
           </div>
           <!-- Grid column -->

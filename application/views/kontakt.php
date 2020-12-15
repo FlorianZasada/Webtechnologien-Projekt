@@ -14,7 +14,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/main.css" />
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/events.css" />
-
     <title>Birgel - Kontakt</title>
   </head>
   
@@ -119,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="telefon">Telefon (optional)</label>
-                    <input id="form_telefon" type="number" name="telefon" class="form-control" placeholder="Bitte hier Telefonnummer eingeben">
+                    <input id="form_telefon" type="tel" pattern='^\+?\d{0,13}' name="telefon" class="form-control" placeholder="Bitte hier Telefonnummer eingeben">
                     <div class="help-block with-errors"></div>
                 </div>
              </div>     
@@ -152,13 +151,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
     </div>
    </form><br><br>
-
-     <div class="sidebar">Eine Sidebar für was auch immer man hier reinschreiben möchte</div>
-
     
-    <footer>
+    <footer class="bottom-footer">
         <!-- Grid row-->
-    <div id="footer-menu" class="row text-center d-flex justify-content-center pt-4">
+    <div id="footer-menu" class="text-center d-flex justify-content-center pt-4">
 
           <!-- Grid column -->
           <div class="col-md-2 mb-3">
