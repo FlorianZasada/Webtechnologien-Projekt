@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <a class="nav-link" href="<?php echo base_url();?>news">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Karte</a>
+                        <a class="nav-link" href="<?php echo base_url();?>karte">Karte</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>kontakt">Kontakt</a>
@@ -63,9 +63,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>home/logout">Logout</a>
                     </li>
+                    <?php if($this->session->userdata("admin")):?>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>admin">Adminpanel</a>
                     </li>
+                    <?php endif;?>
                 </ul>
                 <span class="navbar-text">
                     <?=$this->session->userdata('name');?> 
@@ -109,135 +111,81 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <h1>Veranstaltungen</h1>
                 <h3>Hier werden alle lokalen Veranstaltungen angezeigt!</h3>
             </div>
-
+            
+            <!-- Suchfunktion -->
             <div class="input-group d-flex justify-content-center">
             
                 <input id="search-bar" type="text" class="form-control" placeholder="Suche" aria-label="Suche" aria-describedby="basic-addon1">
-                <div class="input-group-append">
-                    <div class="dropdown">
-                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Kategorien
-                        </a>
+
+                <input class="date-picker" id="search-date-from" type="date" data-toggle="tooltip" data-placement="top" title="Von">
+                <input class="date-picker" id="search-date-to" type="date" data-toggle="tooltip" data-placement="top" title="Bis">
+                <button class="btn" type="button" id="clear-button" data-toggle="tooltip" data-placement="top" title="Datumsfelder leeren"><span class="mdi mdi-delete"></span></button>
+
+                <button class="btn" type="button" id="search-button"><span class="mdi mdi-magnify"></span></button>
+                
+                <?php if($this->session->userdata("admin")):?>
+                <button class="btn" type="button" id="add-event-button" data-toggle="modal" data-target="#createEvent">Event hinzufügen</button>
+                <?php endif;?>
+            </div>
             
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <span class="dropdown-item active">Kategorie 1</span>
-                            <span class="dropdown-item">Kategorie 2</span>
-                            <span class="dropdown-item">Kategorie 3</span>
+            <!--Modal-->
+            <div class="modal fade" id="createEvent" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitel">Event hinzufügen</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form method="post" action="<?php echo base_url(); ?>events/validation" enctype="multipart/form-data">
+                        <div class="modal-body">
+                            <div class="input-group">
+                                <div class="d-flex flex-column"><?php echo validation_errors();
+                                if(isset($upload_error)) echo $upload_error; 
+                                ?></div>
+                                <div class="row col-12">
+                                    <input type="text" class="form-control" name="events_title" placeholder="Titel" value="<?php if(isset($err_title)) echo $err_title;?>" aria-label="Titel" aria-describedby="basic-addon1">
+                                </div>
+
+                                <div class="form-floating row col-12">
+                                    <textarea class="form-control" name="events_description" placeholder="Beschreibung" id="floatingTextarea" maxlength="500"><?php if(isset($err_description)) echo $err_description;?></textarea>
+                                </div>
+
+                                <div class="row col-12">
+                                    <label for="image-upload">Bild auswahl</label>
+                                    <div class="custom-file">
+                                        <input type="file" name="events-image" class="custom-file-input form-control" size="5000" id="image-upload" accept="image/png, image/jpeg, image/jpg">
+                                        <label class="custom-file-label" for="image-upload">Datei Auswählen</label>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" id="close-button" data-dismiss="modal">Schließen</button>
+                            <button type="submit" class="btn">Speichern</button>
+                        </div>
+                    </form>
                     </div>
                 </div>
-            
-                <button class="btn" type="button" id="search-button"><span class="mdi mdi-magnify"></span></button>
             </div>
 
+            <!-- Karten -->
             <div id="card-container" class="container-fluid">
                 <div class="row justify-content-around">
-                    <div class="col-lg-3 col-md-5">
+                <?php foreach($cards as $row):?>
+                    <div class="event-card col-lg-3 col-md-5">
                         <div class="card">
-                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
-                            class="card-img-top" alt="<?php echo base_url();?>assets/.">
+                            <img src="<?=base_url() . 'assets/pics/events/' . $row->image?>" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="col-lg-3 col-md-5">
-                        <div class="card">
-                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
-                            class="card-img-top" alt="<?php echo base_url();?>assets/.">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="col-lg-3 col-md-5">
-                        <div class="card">
-                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
-                                alt="<?php echo base_url();?>assets/.">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                                <a href="#" class="btn">Go somewhere</a>
+                                <h5 class="card-title"><?=$row->title?></h5>
+                                <p class="card-text"><?=$row->description?></p>
+                                <p class="card-text card-date" data-date="<?=date("Y-m-d", strtotime($row->created))?>"><small class="text-muted">Erstellt am <?=date("d.m.Y", strtotime($row->created)) . ' um ' . date("H:i", strtotime($row->created));?></small></p>
+                                <!--a href="#" class="btn">Go somewhere</a-->
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-5">
-                        <div class="card">
-                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
-                                alt="<?php echo base_url();?>assets/.">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                                <a href="#" class="btn">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-5">
-                        <div class="card">
-                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
-                                alt="<?php echo base_url();?>assets/.">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                                <a href="#" class="btn">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-5">
-                        <div class="card">
-                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
-                                alt="<?php echo base_url();?>assets/.">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                                <a href="#" class="btn">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-5">
-                        <div class="card">
-                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
-                                alt="<?php echo base_url();?>assets/.">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                                <a href="#" class="btn">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-5">
-                        <div class="card">
-                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
-                                alt="<?php echo base_url();?>assets/.">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                                <a href="#" class="btn">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-5">
-                        <div class="card">
-                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
-                                alt="<?php echo base_url();?>assets/.">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                                <a href="#" class="btn">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
+                <?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -276,9 +224,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <a href="https://birgel.de/"> birgel.de</a>
         </div>
     </footer>
-      
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="<?=base_url();?>assets/js/events.js"></script>
   </body>
 </html>

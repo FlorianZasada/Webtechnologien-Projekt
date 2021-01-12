@@ -13,28 +13,28 @@ class Admin extends CI_Controller {
 	 * $this->load->view('landing_page');
 	 */
 
-  public function __construct() {
+	public function __construct() {
 
-    parent::__construct();
-    if(null == $this->session->userdata('admin')) redirect('home');
+		parent::__construct();
+		if(null == $this->session->userdata('admin')) redirect('home');
 
-    $this->load->model('admin_model');
-  }
+		$this->load->model('admin_model');
+	}
 
 	public function index()
 	{
 		//AUFGABE: laden Sie 4.0
-    $data['lastnames'] = $this->admin_model->getUserLastNames();
+    	$data['lastnames'] = $this->admin_model->getUserLastNames();
 
 		$this->load->view('admin_page', $data);
 	}
 
 	//Funktion für alle Usernachnamen (Wird per Route erreicht)
-  public function userLastNames() {
-    $data = $this->admin_model->getUserLastNames();
-    
-    echo json_encode($data);
-  }
+	public function userLastNames() {
+		$data = $this->admin_model->getUserLastNames();
+		
+		echo json_encode($data);
+	}
 
 	//Funktion für alle User per Nachmnamen (Wird per Route erreicht)
 	public function userByLastName() {

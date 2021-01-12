@@ -1,3 +1,16 @@
+textarea {
+    min-height: 100px;
+    max-height: 500px;
+}
+
+.modal-body .input-group {
+    margin: 0 !important;
+}
+
+.input-group .row {
+    margin-bottom: 30px;
+}
+
 .card {
     padding: 0;
     margin-bottom: 20px;
@@ -18,6 +31,15 @@
     background-color: #27ae60;
 }
 
+.modal-footer button {
+    border: none;
+}
+
+.date-picker {
+    border-radius: 0;
+    border: 1px solid #ced4da;
+}
+
 #mainbody {
     margin: 0;
     width: 100%;
@@ -25,7 +47,12 @@
 
 #search-bar {
     max-width: 1000px;
+    min-width: 100px;
     border-radius: 0;
+}
+
+#search-button {
+    border-left: 1px solid rgba(0,0,0,0.2),
 }
 
 #card-container {
@@ -44,8 +71,16 @@
     text-align: center;
 }
 
-#search-button {
-    border-left: 1px solid rgba(0,0,0,0.25);
+#add-event-button {
+    margin-left: 50px;
+}
+
+#close-button {
+    background-color: #dedede;
+}
+
+#close-button:hover {
+    background-color: #cfcfcf;
 }
 
 @media(max-width: 992px) {

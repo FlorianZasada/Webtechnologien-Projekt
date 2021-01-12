@@ -27,7 +27,7 @@ class Login extends CI_Controller {
     //Laden der Hilfsklasse für die Formularfeldprüfung
     $this->load->library('form_validation');
     //Laden des entsprechenden Models für die Nutzerregistrierung
-    $this->load->model('login_model');
+    $this->load->model('login_model');  
  }
 
  function index()

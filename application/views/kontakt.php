@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <a class="nav-link" href="<?php echo base_url();?>news">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Karte</a>
+                        <a class="nav-link" href="<?php echo base_url();?>karte">Karte</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="<?php echo base_url();?>kontakt">Kontakt</a>
@@ -69,7 +69,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php endif;?>
             </div>
         </div>
-	</nav>
+    </nav><br><br>
+    
 
         <form>    
             <div class="container">
@@ -152,7 +153,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
    </form><br><br>
     
-    <footer class="bottom-footer">
+   <footer>
         <!-- Grid row-->
     <div id="footer-menu" class="text-center d-flex justify-content-center pt-4">
 
@@ -175,7 +176,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <!-- Grid column -->
           <div class="col-md-2 mb-3">
             <h6 class="text-uppercase">
-              <a href="#!">Kontakt</a>
+              <a href="<?php echo base_url();?>kontakt">Kontakt</a>
             </h6>
           </div>
           <!-- Grid column -->
@@ -185,5 +186,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <a href="https://birgel.de/"> birgel.de</a>
         </div>
     </footer>
+      
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>

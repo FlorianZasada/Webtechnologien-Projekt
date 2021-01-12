@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <a class="nav-link" href="<?php echo base_url();?>news">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Karte</a>
+                        <a class="nav-link" href="<?php echo base_url();?>karte">Karte</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>kontakt">Kontakt</a>

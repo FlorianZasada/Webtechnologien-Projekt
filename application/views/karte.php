@@ -4,21 +4,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!doctype html>
 <html>
-  <head>
-      
-	<!-- Required meta tags -->
+  <head>      
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/bootstrap.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/main.css">
-    <title>Birgel - Startseite</title>
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/bootstrap.css" />
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/main.css" />
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/karte/karte.css" />
+    <title>Birgel - Kontakt</title>
   </head>
   
   <body>
-  
-	<!-- Navigationsleiste -->
+    <!-- Navigationsleiste -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -41,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>news">News</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="<?php echo base_url();?>karte">Karte</a>
                     </li>
                     <li class="nav-item">
@@ -59,7 +58,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>home/logout">Logout</a>
                     </li>
-                    <li class="nav-item ml-auto active">
+                    <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>admin">Adminpanel</a>
                     </li>
                 </ul>
@@ -69,52 +68,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php endif;?>
             </div>
         </div>
-	</nav>
-  
-  <!-- Main Content -->
-  <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div id="description">
-                    <h1>Adminpanel</h1>
-                    <?php foreach($file_upload as $item => $value) echo $item . " ". $value;?>
-                </div>
+	</nav><br><br>
 
-                <div class="article">
-                    <p>Nutzerverwaltung und allgemeine Einstellungen</p>
+         <div class="main">           
+            <h1> Anfahrt </h1><br>
+                             
+            <div class="maps">
+                     <iframe src="https://www.google.com/maps/d/embed?mid=1BAs3uYRPmrrbAGQv4mncFwE80h3waeEc" width="640" height="480"></iframe>
                 </div>
-            </div>
-        </div>
-        <form>
-            <div class="form-group col-md-4">
-            <label for="inputState">Benutzer auswählen:</label>
-            <select id="inputState" class="form-control">
-                <option selected>Auswählen...</option>
-                <?php foreach($lastnames as $row):?>
-                <option><?=$row->lastname;?></option>
-                <?php endforeach;?>
-            </select>
-        </div>
-        </form>
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Nachname</th>
-                <th scope="col">E-Mail</th>
-                <th scope="col">E-Mail verifiziert?</th>
-                <th scope="col">Ist Administrator?</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+             </div><br>    
+          </div>             
+         
 
-  <footer class="bottom-footer">
+        <!--<footer class="bottom-footer" -->
         <!-- Grid row-->
     <div id="footer-menu" class="text-center d-flex justify-content-center pt-4">
 
@@ -137,7 +103,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <!-- Grid column -->
           <div class="col-md-2 mb-3">
             <h6 class="text-uppercase">
-              <a href="#!">Kontakt</a>
+              <a href="<?php echo base_url();?>kontakt">Kontakt</a>
             </h6>
           </div>
           <!-- Grid column -->
@@ -147,9 +113,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <a href="https://birgel.de/"> birgel.de</a>
         </div>
     </footer>
-    <script src="<?=base_url();?>assets/js/jquery.min.js"></script>
+      
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="<?=base_url();?>assets/js/admin_page.js"></script>
   </body>
 </html>

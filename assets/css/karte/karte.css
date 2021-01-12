@@ -1,0 +1,14 @@
+.main {
+    text-align:center;
+}
+
+.maps {
+    height: 100vh;
+    overflow: hidden;
+    margin: 0 10%;
+    }
+    
+.maps iframe {
+height: 100%;
+width: 100%;
+    }
