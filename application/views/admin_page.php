@@ -77,7 +77,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-md-8">
                 <div id="description">
                     <h1>Adminpanel</h1>
-                    <?php foreach($file_upload as $item => $value) echo $item . " ". $value;?>
                 </div>
 
                 <div class="article">

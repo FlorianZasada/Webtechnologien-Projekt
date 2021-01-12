@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 12. Jan 2021 um 08:53
+-- Erstellungszeit: 12. Jan 2021 um 15:18
 -- Server-Version: 10.4.17-MariaDB
 -- PHP-Version: 8.0.0
 
@@ -41,13 +41,9 @@ CREATE TABLE `eventcards` (
 --
 
 INSERT INTO `eventcards` (`id`, `title`, `description`, `image`, `created`, `userid`) VALUES
-(2, 'sdf', 'sdfds', 'Brigel_Haus.jpg', '2021-01-11 13:00:00', 2),
 (3, 'Burg', 'Besuche die heftige Burg in Birgel', 'Wasserburg_Birgel.jpg', '2021-01-12 13:10:00', 2),
-(4, 'asd', 'asd', 'Birgel-b.jpg', '2021-01-13 13:20:00', 2),
-(5, 'fsdf', 'sdfsd', 'Wasserburg_Birgel1.jpg', '2021-01-14 13:30:00', 2),
-(6, 'fdg', 'dfgfd', 'Birgel-b1.jpg', '2021-01-15 13:40:00', 2),
-(7, 'ad', 'aasd', 'Brigel_Haus1.jpg', '2021-01-16 13:50:00', 2),
-(8, 'asd', 'asd', 'Wasserburg_Birgel2.jpg', '2021-01-17 14:50:37', 2);
+(9, 'Schickes Haus', 'Ein wirklich schickes Haus', 'Brigel_Haus2.jpg', '2021-01-13 10:14:24', 2),
+(11, 'Wasserrad', 'Birgel hat echt ein Wasserrad?!?', 'Birgel-b2.jpg', '2021-01-14 10:17:04', 2);
 
 -- --------------------------------------------------------
 
@@ -98,7 +94,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT für Tabelle `eventcards`
 --
 ALTER TABLE `eventcards`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT für Tabelle `users`

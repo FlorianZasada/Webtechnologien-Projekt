@@ -19,4 +19,9 @@ class Event_model extends CI_Model {
         if($query->num_rows() > 0)
             return $query->result();
     }
+
+    public function deleteCardByID($id) {
+        $this->db->where('id', $id);
+        $this->db->delete('eventcards');
+    }
 }

@@ -52,4 +52,10 @@ class Events extends CI_Controller {
 
 		return $data;
 	}
+
+	public function deleteCard() {
+		$this->event_model->deleteCardByID($this->input->post('id'));
+
+		unlink($_SERVER['DOCUMENT_ROOT'] . '/assets/pics/events/' . $this->input->post('img'));
+	}
 }

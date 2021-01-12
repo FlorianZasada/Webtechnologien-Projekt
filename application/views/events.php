@@ -119,12 +119,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <input class="date-picker" id="search-date-from" type="date" data-toggle="tooltip" data-placement="top" title="Von">
                 <input class="date-picker" id="search-date-to" type="date" data-toggle="tooltip" data-placement="top" title="Bis">
-                <button class="btn" type="button" id="clear-button" data-toggle="tooltip" data-placement="top" title="Datumsfelder leeren"><span class="mdi mdi-delete"></span></button>
-
-                <button class="btn" type="button" id="search-button"><span class="mdi mdi-magnify"></span></button>
+                <button class="btn highlight-button" type="button" id="clear-button" data-toggle="tooltip" data-placement="top" title="Datumsfelder leeren"><span class="mdi mdi-delete"></span></button>
                 
                 <?php if($this->session->userdata("admin")):?>
-                <button class="btn" type="button" id="add-event-button" data-toggle="modal" data-target="#createEvent">Event hinzufügen</button>
+                <button class="btn highlight-button" type="button" id="add-event-button" data-toggle="modal" data-target="#createEvent">Event hinzufügen</button>
                 <?php endif;?>
             </div>
             
@@ -163,7 +161,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn" id="close-button" data-dismiss="modal">Schließen</button>
-                            <button type="submit" class="btn">Speichern</button>
+                            <button type="submit" class="btn highlight-button">Speichern</button>
                         </div>
                     </form>
                     </div>
@@ -175,13 +173,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="row justify-content-around">
                 <?php foreach($cards as $row):?>
                     <div class="event-card col-lg-3 col-md-5">
-                        <div class="card">
+                        <div class="card" data-id="<?=$row->id?>">
                             <img src="<?=base_url() . 'assets/pics/events/' . $row->image?>" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title"><?=$row->title?></h5>
                                 <p class="card-text"><?=$row->description?></p>
-                                <p class="card-text card-date" data-date="<?=date("Y-m-d", strtotime($row->created))?>"><small class="text-muted">Erstellt am <?=date("d.m.Y", strtotime($row->created)) . ' um ' . date("H:i", strtotime($row->created));?></small></p>
-                                <!--a href="#" class="btn">Go somewhere</a-->
+                                <p class="card-text card-date" data-date="<?=date("Y-m-d", strtotime($row->created))?>"><small class="text-muted">Erstellt am <?=date("d.m.Y", strtotime($row->created)) . ' um ' . date("H:i", strtotime($row->created));?></small>
+                                    <?php if($this->session->userdata("admin")):?>
+                                    <button class="btn btn-light delete-button"><span class="mdi mdi-delete"></span></button>
+                                    <?php endif;?>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -224,7 +225,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <a href="https://birgel.de/"> birgel.de</a>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="<?=base_url();?>assets/js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="<?=base_url();?>assets/js/events.js"></script>

@@ -21,14 +21,14 @@ textarea {
     padding: 0 20px;
 }
 
-.btn {
+.highlight-button {
     background-color: #2ecc71;
     color: white !important;
     border-radius: 0;
 }
 
-.btn:hover {
-    background-color: #27ae60;
+.highlight-button:hover {
+    background-color: #22aa5b;
 }
 
 .modal-footer button {
@@ -40,6 +40,12 @@ textarea {
     border: 1px solid #ced4da;
 }
 
+.delete-button {
+    float: right;
+    background-color: white;
+    border: none;
+}
+
 #mainbody {
     margin: 0;
     width: 100%;
@@ -49,10 +55,6 @@ textarea {
     max-width: 1000px;
     min-width: 100px;
     border-radius: 0;
-}
-
-#search-button {
-    border-left: 1px solid rgba(0,0,0,0.2),
 }
 
 #card-container {
