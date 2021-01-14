@@ -16,8 +16,10 @@ $(() => {
     };
 
     const routes = window.location.pathname.split('/');
-    if(routes[routes.length - 1] === "validation")
-        $('#createEvent').modal('show');
+    switch(routes[routes.length - 1]) {
+        case "validation": $('#createEvent').modal('show');
+        case "editCard": $('#editEvent').modal('show');
+    }
 
     $('#image-upload').on('change', function() {
         var fileName = $(this).val();
@@ -35,10 +37,14 @@ $(() => {
 
     $('.date-picker').on('change', hideByRules);
 
-    $('.delete-button').on('click', function() {
+    $('#delete-button').on('click', function() {
         const id = $(this).closest('.card').data('id');
         let img = $(this).closest('.card-body').siblings('img').attr('src').split('/');
         img = img[img.length - 1];
         $.post('events/deleteCard', { id, img }, () => window.location.reload());
+    });
+
+    $('#edit-event').on('click', () => {
+        $()
     });
 });

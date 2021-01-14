@@ -47,6 +47,12 @@ class Events extends CI_Controller {
 		}
 	}
 
+	public function editCard() {
+		if($this->upload->do_upload('events-image')) {
+			
+		}
+	}
+
 	public function loadEventCards() {
 		$data = $this->event_model->getAllCards();
 

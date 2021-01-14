@@ -14,8 +14,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/leben_freizeit/main.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/leben_freizeit/leben_freizeit.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/carousel.css">
 
-    
     <title>Birgel - Leben und Freizeit</title>
   </head>
   
@@ -35,17 +35,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>home">Startseite<span class="sr-only">(current)</span></a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url();?>news">News</a>
+                    </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="<?php echo base_url();?>leben_freizeit">Leben & Freizeit</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>events">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url();?>news">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url();?>karte">Karte</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>kontakt">Kontakt</a>
@@ -77,36 +74,55 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</nav>
       
     <!-- Slideshow -->
-	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-		</ol>
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-			  <img class="d-block w-100" src="<?php echo base_url();?>assets/pics/carousel1.jpg" alt="First slide">
-			</div>
-			<div class="carousel-item">
-			  <img class="d-block w-100" src="<?php echo base_url();?>assets/pics/carousel2.jpg" alt="Second slide">
-			</div>
-			<div class="carousel-item">
-			  <img class="d-block w-100" src="<?php echo base_url();?>assets/pics/carousel3.jpg" alt="Third slide">
-			</div>
-		</div>
-		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only">Zurück</span>
-		</a>
-		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only">Vor</span>
-		</a>
-	</div>
-      
-    <div id="mainbody"> 
-        <div id="mainbody"> 
-            <div id="content">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide" src="<?php echo base_url();?>assets/pics/carousel1.jpg" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>Example headline.</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="second-slide" src="<?php echo base_url();?>assets/pics/carousel2.jpg" alt="Second slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Another example headline.</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="third-slide" src="<?php echo base_url();?>assets/pics/carousel3.jpg" alt="Third slide">
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h1>One more for good measure.</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+ 
+        <div class="container"> 
                 <div id="description">
                     <h1>Leben und Freizeit</h1>
                 </div>
@@ -135,24 +151,62 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <p>Die Sporthalle der Grundschule Burg Birgel hat eine Größe von 9,5 m x 12 m und wird von den Vereinen genutzt.</p>
 
                 </div>
-            </div>
-
-            <div class="sidebar">
-
+                
+                <div class="article">
                 <h4>Erholungsflächen</h4>
-                <p>Das freiliegende Birgel bietet viel Raum für lange Spaziergänge in der Natur. Mögliche Ziele sind der Staatsforst Gürzenich und der Park an der Burg Birgel.</p>
-            <h4>Grillplätze</h4>
-                <p>In Birgel befindet sich ein 120 m² großer Grillplatz mit einer Grillhütte und vier Tischen und acht Bänken, die fest im Boden verankert sind.</p>
-            <h4>Löschgruppe Birgel</h4>
-                <p>Die Löschgruppe der Freiwilligen Feuerwehr der Stadt Düren bildet zusammen mit den benachbarten Löschgruppen Derichsweiler und Gürzenich einen Löschzug.</p>
+                        <p>Das freiliegende Birgel bietet viel Raum für lange Spaziergänge in der Natur. Mögliche Ziele sind der Staatsforst Gürzenich und der Park an der Burg Birgel.</p>
+                    <h4>Grillplätze</h4>
+                        <p>In Birgel befindet sich ein 120 m² großer Grillplatz mit einer Grillhütte und vier Tischen und acht Bänken, die fest im Boden verankert sind.</p>
+                    <h4>Löschgruppe Birgel</h4>
+                        <p>Die Löschgruppe der Freiwilligen Feuerwehr der Stadt Düren bildet zusammen mit den benachbarten Löschgruppen Derichsweiler und Gürzenich einen Löschzug.</p>
+                </div>
 
+                <div id="card-container" class="container-fluid">
+                    <div class="row justify-content-around">
+                        <div class="col-lg-3 col-md-5">
+                            <div class="card">
+                                <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
+                                class="card-img-top" alt="<?php echo base_url();?>assets/.">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-5">
+                            <div class="card">
+                                <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
+                                class="card-img-top" alt="<?php echo base_url();?>assets/.">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-5">
+                            <div class="card">
+                                <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
+                                    alt="<?php echo base_url();?>assets/.">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                        content.</p>
+                                    <a href="#" class="btn">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>               
+                    </div>
+                </div>
 
+                <div class="maps">
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1BAs3uYRPmrrbAGQv4mncFwE80h3waeEc" width="640" height="480"></iframe>
+                </div>
             </div>
-            
         </div>
-    </div>
     
-    <footer>
+        <footer>
         <!-- Grid row-->
     <div id="footer-menu" class="text-center d-flex justify-content-center pt-4">
 
@@ -175,7 +229,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <!-- Grid column -->
           <div class="col-md-2 mb-3">
             <h6 class="text-uppercase">
-              <a href="#!">Kontakt</a>
+              <a href="<?php echo base_url();?>kontakt">Kontakt</a>
             </h6>
           </div>
           <!-- Grid column -->

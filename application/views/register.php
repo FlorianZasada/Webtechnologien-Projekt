@@ -35,16 +35,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <a class="nav-link" href="<?php echo base_url();?>home">Startseite<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url();?>news">News</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>leben_freizeit">Leben & Freizeit</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>events">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url();?>news">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url();?>karte">Karte</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>kontakt">Kontakt</a>

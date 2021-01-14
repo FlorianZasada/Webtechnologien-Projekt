@@ -22,13 +22,20 @@ textarea {
 }
 
 .highlight-button {
-    background-color: #2ecc71;
+    background-color: #2ecc71 !important;
     color: white !important;
     border-radius: 0;
+    border-color: #2ecc71 !important;
 }
 
 .highlight-button:hover {
-    background-color: #22aa5b;
+    background-color: #22aa5b !important;
+    border-color: #22aa5b !important;
+}
+
+.highlight-button:active {
+    background-color: #22aa5c !important;
+    border-color: #22aa5c !important;
 }
 
 .modal-footer button {
@@ -40,7 +47,7 @@ textarea {
     border: 1px solid #ced4da;
 }
 
-.delete-button {
+.action-button {
     float: right;
     background-color: white;
     border: none;
