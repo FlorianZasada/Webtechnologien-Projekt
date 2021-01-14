@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Welcome to CarShare</title>
+	<title>Willkommen bei Birgel.de</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -31,16 +31,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <a class="nav-link" href="<?php echo base_url();?>home">Startseite<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="<?php echo base_url();?>news">News</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="<?php echo base_url();?>leben_freizeit">Leben & Freizeit</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo base_url();?>events">Events</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url();?>news">News</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Karte</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo base_url();?>kontakt">Kontakt</a>

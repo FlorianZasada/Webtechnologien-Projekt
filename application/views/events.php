@@ -17,6 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/main.css" />
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/events.css" />
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/carousel.css">
 
     <title>Birgel - Events</title>
   </head>
@@ -37,16 +38,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <a class="nav-link" href="<?php echo base_url();?>home">Startseite<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url();?>news">News</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>leben_freizeit">Leben & Freizeit</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="<?php echo base_url();?>events">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url();?>news">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Karte</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>kontakt">Kontakt</a>
@@ -63,9 +61,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>home/logout">Logout</a>
                     </li>
+                    <?php if($this->session->userdata("admin")):?>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>admin">Adminpanel</a>
                     </li>
+                    <?php endif;?>
                 </ul>
                 <span class="navbar-text">
                     <?=$this->session->userdata('name');?> 
@@ -76,32 +76,53 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</nav>
     
     <!-- Slideshow -->
-	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-		</ol>
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-			  <img class="d-block w-100" src="<?php echo base_url();?>assets/pics/carousel1.jpg" alt="First slide">
-			</div>
-			<div class="carousel-item">
-			  <img class="d-block w-100" src="<?php echo base_url();?>assets/pics/carousel2.jpg" alt="Second slide">
-			</div>
-			<div class="carousel-item">
-			  <img class="d-block w-100" src="<?php echo base_url();?>assets/pics/carousel3.jpg" alt="Third slide">
-			</div>
-		</div>
-		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only">Zurück</span>
-		</a>
-		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only">Vor</span>
-		</a>
-	</div>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide" src="<?php echo base_url();?>assets/pics/carousel1.jpg" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>Example headline.</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg highlight-button" href="#" role="button">Sign up today</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="second-slide" src="<?php echo base_url();?>assets/pics/carousel2.jpg" alt="Second slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Another example headline.</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-primary highlight-button" href="#" role="button">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="third-slide" src="<?php echo base_url();?>assets/pics/carousel3.jpg" alt="Third slide">
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h1>One more for good measure.</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg highlight-button" href="#" role="button">Browse gallery</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
 
     <div id="mainbody"> 
         <div id="content">
@@ -109,136 +130,127 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <h1>Veranstaltungen</h1>
                 <h3>Hier werden alle lokalen Veranstaltungen angezeigt!</h3>
             </div>
-
+            
+            <!-- Suchfunktion -->
             <div class="input-group d-flex justify-content-center">
             
                 <input id="search-bar" type="text" class="form-control" placeholder="Suche" aria-label="Suche" aria-describedby="basic-addon1">
-                <div class="input-group-append">
-                    <div class="dropdown">
-                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Kategorien
-                        </a>
+
+                <input class="date-picker" id="search-date-from" type="date" data-toggle="tooltip" data-placement="top" title="Von">
+                <input class="date-picker" id="search-date-to" type="date" data-toggle="tooltip" data-placement="top" title="Bis">
+                <button class="btn highlight-button" type="button" id="clear-button" data-toggle="tooltip" data-placement="top" title="Datumsfelder leeren"><span class="mdi mdi-delete"></span></button>
+                
+                <?php if($this->session->userdata("admin")):?>
+                <button class="btn highlight-button" type="button" id="add-event-button" data-toggle="modal" data-target="#createEvent">Event hinzufügen</button>
+                <?php endif;?>
+            </div>
             
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <span class="dropdown-item active">Kategorie 1</span>
-                            <span class="dropdown-item">Kategorie 2</span>
-                            <span class="dropdown-item">Kategorie 3</span>
+            <!--Modal Add Event-->
+            <div class="modal fade" id="createEvent" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitel">Event hinzufügen</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form method="post" action="<?php echo base_url(); ?>events/validation" enctype="multipart/form-data">
+                        <div class="modal-body">
+                            <div class="input-group">
+                                <div class="d-flex flex-column"><?php echo validation_errors();
+                                if(isset($upload_error)) echo $upload_error; 
+                                ?></div>
+                                <div class="row col-12">
+                                    <input type="text" class="form-control" name="events_title" placeholder="Titel" value="<?php if(isset($err_title)) echo $err_title;?>" aria-label="Titel" aria-describedby="basic-addon1">
+                                </div>
+
+                                <div class="form-floating row col-12">
+                                    <textarea class="form-control" name="events_description" placeholder="Beschreibung" id="floatingTextarea" maxlength="500"><?php if(isset($err_description)) echo $err_description;?></textarea>
+                                </div>
+
+                                <div class="row col-12">
+                                    <label for="image-upload">Bild auswahl</label>
+                                    <div class="custom-file">
+                                        <input type="file" name="events-image" class="custom-file-input form-control" size="5000" id="image-upload" accept="image/png, image/jpeg, image/jpg">
+                                        <label class="custom-file-label" for="image-upload">Datei Auswählen</label>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" id="close-button" data-dismiss="modal">Schließen</button>
+                            <button type="submit" class="btn highlight-button">Speichern</button>
+                        </div>
+                    </form>
                     </div>
                 </div>
-            
-                <button class="btn" type="button" id="search-button"><span class="mdi mdi-magnify"></span></button>
             </div>
 
+            <!-- Karten -->
             <div id="card-container" class="container-fluid">
                 <div class="row justify-content-around">
-                    <div class="col-lg-3 col-md-5">
-                        <div class="card">
-                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
-                            class="card-img-top" alt="<?php echo base_url();?>assets/.">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn">Go somewhere</a>
+                <?php if(isset($cards)):?>
+                    <?php foreach($cards as $row):?>
+                        <div class="event-card col-lg-3 col-md-5">
+                            <div class="card" data-id="<?=$row->id?>">
+                                <img src="<?=base_url() . 'assets/pics/events/' . $row->image?>" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?=$row->title?></h5>
+                                    <p class="card-text"><?=$row->description?></p>
+                                    <p class="card-text card-date" data-date="<?=date("Y-m-d", strtotime($row->created))?>"><small class="text-muted">Erstellt am <?=date("d.m.Y", strtotime($row->created)) . ' um ' . date("H:i", strtotime($row->created));?></small>
+                                        <?php if($this->session->userdata("admin")):?>
+                                            <button class="btn btn-light action-button" id="delete-button"><span class="mdi mdi-delete"></span></button>
+                                            <button class="btn btn-light action-button" id="edit-button" data-toggle="modal" data-target="#editEvent"><span class="mdi mdi-pen"></span></button>
+                                        <?php endif;?>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div> 
-                    <div class="col-lg-3 col-md-5">
-                        <div class="card">
-                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
-                            class="card-img-top" alt="<?php echo base_url();?>assets/.">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn">Go somewhere</a>
-                            </div>
+                    <?php endforeach; ?>
+                <?php else: echo "<h1>Es sind keine Events vorhanden</h1>"; ?>
+                <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Edit Event-->
+    <div class="modal fade" id="editEvent" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitel">Event bearbeiten</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="post" action="<?php echo base_url(); ?>events/editCard" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="input-group">
+                        <div class="d-flex flex-column"><?php if(isset($upload_error)) echo $upload_error; ?></div>
+                        <div class="row col-12">
+                            <input type="text" class="form-control" name="events_title" placeholder="Titel" aria-label="Titel" aria-describedby="basic-addon1">
                         </div>
-                    </div> 
-                    <div class="col-lg-3 col-md-5">
-                        <div class="card">
-                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
-                                alt="<?php echo base_url();?>assets/.">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                                <a href="#" class="btn">Go somewhere</a>
-                            </div>
+
+                        <div class="form-floating row col-12">
+                            <textarea class="form-control" name="events_description" placeholder="Beschreibung" id="floatingTextarea" maxlength="500"></textarea>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-5">
-                        <div class="card">
-                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
-                                alt="<?php echo base_url();?>assets/.">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                                <a href="#" class="btn">Go somewhere</a>
+
+                        <div class="row col-12">
+                            <label for="image-upload">Bild auswahl</label>
+                            <div class="custom-file">
+                                <input type="file" name="events-image" class="custom-file-input form-control" size="5000" id="image-upload" accept="image/png, image/jpeg, image/jpg">
+                                <label class="custom-file-label" for="image-upload">Datei Auswählen</label>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-5">
-                        <div class="card">
-                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
-                                alt="<?php echo base_url();?>assets/.">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                                <a href="#" class="btn">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-5">
-                        <div class="card">
-                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
-                                alt="<?php echo base_url();?>assets/.">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                                <a href="#" class="btn">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-5">
-                        <div class="card">
-                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
-                                alt="<?php echo base_url();?>assets/.">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                                <a href="#" class="btn">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-5">
-                        <div class="card">
-                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
-                                alt="<?php echo base_url();?>assets/.">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                                <a href="#" class="btn">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-5">
-                        <div class="card">
-                            <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
-                                alt="<?php echo base_url();?>assets/.">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                                <a href="#" class="btn">Go somewhere</a>
-                            </div>
-                        </div>
+                        </div>  
                     </div>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" id="close-button" data-dismiss="modal">Schließen</button>
+                    <button type="submit" class="btn highlight-button">Speichern</button>
+                </div>
+            </form>
             </div>
         </div>
     </div>
@@ -276,9 +288,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <a href="https://birgel.de/"> birgel.de</a>
         </div>
     </footer>
-      
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="<?=base_url();?>assets/js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="<?=base_url();?>assets/js/events.js"></script>
   </body>
 </html>

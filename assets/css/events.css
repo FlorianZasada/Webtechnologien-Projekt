@@ -1,3 +1,16 @@
+textarea {
+    min-height: 100px;
+    max-height: 500px;
+}
+
+.modal-body .input-group {
+    margin: 0 !important;
+}
+
+.input-group .row {
+    margin-bottom: 30px;
+}
+
 .card {
     padding: 0;
     margin-bottom: 20px;
@@ -8,14 +21,36 @@
     padding: 0 20px;
 }
 
-.btn {
-    background-color: #2ecc71;
+.highlight-button {
+    background-color: #2ecc71 !important;
     color: white !important;
     border-radius: 0;
+    border-color: #2ecc71 !important;
 }
 
-.btn:hover {
-    background-color: #27ae60;
+.highlight-button:hover {
+    background-color: #22aa5b !important;
+    border-color: #22aa5b !important;
+}
+
+.highlight-button:active {
+    background-color: #22aa5c !important;
+    border-color: #22aa5c !important;
+}
+
+.modal-footer button {
+    border: none;
+}
+
+.date-picker {
+    border-radius: 0;
+    border: 1px solid #ced4da;
+}
+
+.action-button {
+    float: right;
+    background-color: white;
+    border: none;
 }
 
 #mainbody {
@@ -25,6 +60,7 @@
 
 #search-bar {
     max-width: 1000px;
+    min-width: 100px;
     border-radius: 0;
 }
 
@@ -44,8 +80,16 @@
     text-align: center;
 }
 
-#search-button {
-    border-left: 1px solid rgba(0,0,0,0.25);
+#add-event-button {
+    margin-left: 50px;
+}
+
+#close-button {
+    background-color: #dedede;
+}
+
+#close-button:hover {
+    background-color: #cfcfcf;
 }
 
 @media(max-width: 992px) {
