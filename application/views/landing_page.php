@@ -122,7 +122,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </a>
       </div>
       
-    <div class="container">
+    
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div id="description">
@@ -141,79 +141,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <p>Um mehr über Birgel erfahren zu können, bietet diese Internetseite alle möglichen Informationen rund um den Bezirk.</p>
                 </div>
             </div>
-        
-            <div class="col-lg-8">
-                <div class="row justify-content-between">
-                    <div class="col-4 preview-card">
-                        <a href="<?php echo base_url();?>news">
-                            <div class="card">
-                                <img src="<?php echo base_url();?>/assets/pics/Dueren_Banner.jpg" class="card-img-top" alt="...">
-                                <div class="card-body prewview-card-body">
-                                    <h5 class="card-title preview-card-title">News</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and     make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-4 preview-card">
-                        <a href="<?php echo base_url();?>events">
-                            <div class="card">
-                                <img src="<?php echo base_url();?>assets/pics/Dueren_Banner.jpg" class="card-img-top" alt="...">
-                                <div class="card-body prewview-card-body">
-                                    <h5 class="card-title preview-card-title">Events</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and     make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-4 preview-card">
-                        <a href="./html/anfahrt.html">
-                            <div class="card">
-                                <img src="<?php echo base_url();?>assets/pics/Dueren_Banner.jpg" class="card-img-top" alt="...">
-                                <div class="card-body prewview-card-body">
-                                    <h5 class="card-title preview-card-title">Anfahrt</h5>
-                                    <p class="card-text">Some quick example text to build on the        card title and     make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
+
+    <div class="container marketing"> 
+        <hr class="featurette-divider">
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+        <div class="col-lg-4">
+            <img class="rounded-circle" src="<?php echo base_url();?>assets/pics/lebenundfreizeit/maifest.jpg" alt="Generic placeholder image" width="140" height="140">
+            <h2>Veranstaltungen</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="rounded-circle" src="<?php echo base_url();?>assets/pics/lebenundfreizeit/sportplatz.jpg" alt="Generic placeholder image" width="140" height="140">
+            <h2>News</h2>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="rounded-circle" src="<?php echo base_url();?>assets/pics/lebenundfreizeit/bauernhof.jpg" alt="Generic placeholder image" width="140" height="140">
+            <h2>Erholungsflächen</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+
         
-    <footer>
-        <!-- Grid row-->
-    <div id="footer-menu" class="text-center d-flex justify-content-center pt-4">
+    </div><!-- /.row -->              
 
-          <!-- Grid column -->
-          <div class="col-md-2 mb-3">
-              <h6 class="text-uppercase">
-                  <a href="#!">Impressum</a>
-              </h6>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-2 mb-3">
-              <h6 class="text-uppercase">
-                  <a href="#!">Datenschutz</a>
-              </h6>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-2 mb-3">
-            <h6 class="text-uppercase">
-              <a href="<?php echo base_url();?>kontakt">Kontakt</a>
-            </h6>
-          </div>
-          <!-- Grid column -->
-        </div>
-        
-        <div id="footer-copyright" class="footer-copyright text-center py-3" >© 2020 Copyright:
-            <a href="https://birgel.de/"> birgel.de</a>
-        </div>
+    
+    <!-- FOOTER --> 
+    <footer class="container">
+        <hr class="featurette-divider">    
+        <p class="float-right"><a href="#">Zum Seitenanfang</a></p>
+        <p>&copy; 2020 Birgel &middot; <a href="<?php echo base_url();?>impressum">Impressum</a> &middot; <a href="<?php echo base_url();?>datenschutz">Datenschutz</a></p>
     </footer>
       
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
