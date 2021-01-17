@@ -263,38 +263,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </div>
     
-    <footer>
-        <!-- Grid row-->
-    <div id="footer-menu" class="text-center d-flex justify-content-center pt-4">
-
-          <!-- Grid column -->
-          <div class="col-md-2 mb-3">
-              <h6 class="text-uppercase">
-                  <a href="#!">Impressum</a>
-              </h6>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-2 mb-3">
-              <h6 class="text-uppercase">
-                  <a href="#!">Datenschutz</a>
-              </h6>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-2 mb-3">
-            <h6 class="text-uppercase">
-              <a href="<?php echo base_url();?>kontakt">Kontakt</a>
-            </h6>
-          </div>
-          <!-- Grid column -->
-        </div>
-        
-        <div id="footer-copyright" class="footer-copyright text-center py-3" >© 2020 Copyright:
-            <a href="https://birgel.de/"> birgel.de</a>
-        </div>
+    <!-- FOOTER --> 
+    <footer class="container">
+        <hr class="featurette-divider">    
+        <p class="float-right"><a href="#">Zum Seitenanfang</a></p>
+        <p>&copy; 2020 Birgel &middot; <a href="<?php echo base_url();?>impressum">Impressum</a> &middot; <a href="<?php echo base_url();?>datenschutz">Datenschutz</a></p>
     </footer>
       
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
