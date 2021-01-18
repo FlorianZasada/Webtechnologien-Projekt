@@ -141,12 +141,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <button class="btn highlight-button" type="button" id="clear-button" data-toggle="tooltip" data-placement="top" title="Datumsfelder leeren"><span class="mdi mdi-delete"></span></button>
                 
                 <?php if($this->session->userdata("admin")):?>
-                <button class="btn highlight-button" type="button" id="add-event-button" data-toggle="modal" data-target="#createEvent">Event hinzufügen</button>
+                <button class="btn highlight-button" type="button" id="add-event-button" data-toggle="modal" data-target="#createCard">Event hinzufügen</button>
                 <?php endif;?>
             </div>
             
             <!--Modal Add Event-->
-            <div class="modal fade" id="createEvent" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitel" aria-hidden="true">
+            <div class="modal fade" id="createCard" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                     <div class="modal-header">
@@ -155,7 +155,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <form method="post" action="<?php echo base_url(); ?>events/validation" enctype="multipart/form-data">
+                    <form method="post" action="<?php echo base_url(); ?>events/createCard" enctype="multipart/form-data">
                         <div class="modal-body">
                             <div class="input-group">
                                 <div class="d-flex flex-column"><?php echo validation_errors();
@@ -166,20 +166,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
 
                                 <div class="form-floating row col-12">
-                                    <textarea class="form-control" name="events_description" placeholder="Beschreibung" id="floatingTextarea" maxlength="500"><?php if(isset($err_description)) echo $err_description;?></textarea>
+                                    <textarea class="form-control" name="events_description" placeholder="Beschreibung" id="floatingTextareaAdd" maxlength="500"><?php if(isset($err_description)) echo $err_description;?></textarea>
                                 </div>
 
                                 <div class="row col-12">
                                     <label for="image-upload">Bild auswahl</label>
                                     <div class="custom-file">
-                                        <input type="file" name="events-image" class="custom-file-input form-control" size="5000" id="image-upload" accept="image/png, image/jpeg, image/jpg">
+                                        <input type="file" name="events-image" class="image-upload custom-file-input form-control" size="5000" accept="image/png, image/jpeg, image/jpg">
                                         <label class="custom-file-label" for="image-upload">Datei Auswählen</label>
                                     </div>
                                 </div>  
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn" id="close-button" data-dismiss="modal">Schließen</button>
+                            <button type="button close-button" class="btn" data-dismiss="modal">Schließen</button>
                             <button type="submit" class="btn highlight-button">Speichern</button>
                         </div>
                     </form>
@@ -188,7 +188,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
             <!-- Karten -->
-            <div id="card-container" class="container-fluid">
+            <div class="container-fluid card-container">
                 <div class="row justify-content-around">
                 <?php if(isset($cards)):?>
                     <?php foreach($cards as $row):?>
@@ -197,11 +197,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <img src="<?=base_url() . 'assets/pics/events/' . $row->image?>" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="card-title"><?=$row->title?></h5>
-                                    <p class="card-text"><?=$row->description?></p>
+                                    <p class="card-text card-description"><?=$row->description?></p>
                                     <p class="card-text card-date" data-date="<?=date("Y-m-d", strtotime($row->created))?>"><small class="text-muted">Erstellt am <?=date("d.m.Y", strtotime($row->created)) . ' um ' . date("H:i", strtotime($row->created));?></small>
                                         <?php if($this->session->userdata("admin")):?>
-                                            <button class="btn btn-light action-button" id="delete-button"><span class="mdi mdi-delete"></span></button>
-                                            <button class="btn btn-light action-button" id="edit-button" data-toggle="modal" data-target="#editEvent"><span class="mdi mdi-pen"></span></button>
+                                            <button class="btn btn-light action-button delete-button"><span class="mdi mdi-delete"></span></button>
+                                            <button class="btn btn-light action-button edit-button" data-toggle="modal" data-target="#editCard"><span class="mdi mdi-pen"></span></button>
                                         <?php endif;?>
                                     </p>
                                 </div>
@@ -216,7 +216,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 
     <!--Modal Edit Event-->
-    <div class="modal fade" id="editEvent" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitel" aria-hidden="true">
+    <div class="modal fade" id="editCard" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
             <div class="modal-header">
@@ -228,26 +228,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <form method="post" action="<?php echo base_url(); ?>events/editCard" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="input-group">
-                        <div class="d-flex flex-column"><?php if(isset($upload_error)) echo $upload_error; ?></div>
+                        <div div class="d-flex flex-column"><?php echo validation_errors();
+                            if(isset($upload_error)) echo $upload_error; 
+                        ?></div>
                         <div class="row col-12">
-                            <input type="text" class="form-control" name="events_title" placeholder="Titel" aria-label="Titel" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" name="events_title" value="<?php if(isset($err_title)) echo $err_title;?>" placeholder="Titel" aria-label="Titel" aria-describedby="basic-addon1">
                         </div>
 
                         <div class="form-floating row col-12">
-                            <textarea class="form-control" name="events_description" placeholder="Beschreibung" id="floatingTextarea" maxlength="500"></textarea>
+                            <textarea class="form-control" name="events_description" placeholder="Beschreibung" id="floatingTextareaEdit" maxlength="500"><?php if(isset($err_description)) echo $err_description;?></textarea>
                         </div>
 
                         <div class="row col-12">
                             <label for="image-upload">Bild auswahl</label>
                             <div class="custom-file">
-                                <input type="file" name="events-image" class="custom-file-input form-control" size="5000" id="image-upload" accept="image/png, image/jpeg, image/jpg">
+                                <input type="file" name="events-image" class="image-upload custom-file-input form-control" size="5000" accept="image/png, image/jpeg, image/jpg">
                                 <label class="custom-file-label" for="image-upload">Datei Auswählen</label>
                             </div>
                         </div>  
                     </div>
                 </div>
+
+                <input type="hidden" name="card-id"/>
+                <input type="hidden" name="file-flag"/>
+                <input type="hidden" name="old-image"/>
+
                 <div class="modal-footer">
-                    <button type="button" class="btn" id="close-button" data-dismiss="modal">Schließen</button>
+                    <button type="button close-button" class="btn" data-dismiss="modal">Schließen</button>
                     <button type="submit" class="btn highlight-button">Speichern</button>
                 </div>
             </form>
