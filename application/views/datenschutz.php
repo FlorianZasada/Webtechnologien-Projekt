@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/bootstrap.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/main.css">
-    <title>Birgel - Adminpanel</title>
+    <title>Birgel - Datenschutz</title>
   </head>
   
   <body>
@@ -56,7 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>home/logout">Logout</a>
                     </li>
-                    <li class="nav-item ml-auto active">
+                    <li class="nav-item ml-auto">
                         <a class="nav-link" href="<?php echo base_url();?>admin">Adminpanel</a>
                     </li>
                 </ul>
@@ -68,47 +68,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 	</nav>
   
-  <!-- Main Content -->
-  <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
+    <!-- Main Content -->
+    <div class="row justify-content-center">
+            <div class="col-md-7">
                 <div id="description">
-                    <h1>Adminpanel</h1>
-                </div>
-
-                <div class="article">
-                    <p>Nutzerverwaltung und allgemeine Einstellungen</p>
+                    <h1>Datenschutz</h1>
                 </div>
             </div>
-        </div>
-        <form>
-            <div class="form-group col-md-4">
-            <label for="inputState">Benutzer auswählen:</label>
-            <select id="inputState" class="form-control">
-                <option selected>Auswählen...</option>
-                <?php foreach($lastnames as $row):?>
-                <option><?=$row->lastname;?></option>
-                <?php endforeach;?>
-            </select>
-        </div>
-        </form>
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Nachname</th>
-                <th scope="col">E-Mail</th>
-                <th scope="col">E-Mail verifiziert?</th>
-                <th scope="col">Ist Administrator?</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    </div>                
 
     <!-- FOOTER --> 
     <footer class="container">

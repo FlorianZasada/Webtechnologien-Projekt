@@ -121,123 +121,89 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <span class="sr-only">Next</span>
         </a>
       </div>
- 
-        <div class="container"> 
-                <div id="description">
-                    <h1>Leben und Freizeit</h1>
-                </div>
 
-                <div class="article">
-                    <h3>Eckeberger Kinderbauernhof</h3>
-                    <p>Der Eckeberger Kinderbauernhof ist vormittags für Spielgruppen, Kindergärten und Schulklassen geöffnet. Nachmittags können dort Kindergeburtstage gefeiert werden.
-                        Seit mehreren Jahren haben Kinder zwischen zwei und zwölf Jahren auf dem idyllisch gelegenen Hof am Waldrand von Birgel die Möglichkeit, Tiere (u.a. Kühe, Ponys, Schafe, Ziegen, Meerschweinchen und Häschen) und Natur hautnah zu erleben.
-                        Es werden Planwagenfahrten angeboten, und die Strohspielescheune mit Trampolin lädt zum Klettern ein. Zwischendurch besteht die Möglichkeit, in einer gemütlichen Holzhütte zu picknicken.
-                        </p>
-                </div>
+    <div class="container marketing">
+        <h1>Leben und Freizeit</h1>
+        <!-- START THE FEATURETTES -->
 
-                <div class="article">
-                    <h3>Spielplätze</h3>
-                    <p>Auf vier Spielplätzen können die Kinder aus Birgel rutschen, klettern, schaukeln und toben. Der Spielplatz "Fliederbusch" bietet mit einer Größe von 820 m² alles, was das Kinderherz begehrt. 
-                        Auf dem Spielplatz befindet sich auch eine Tischtennisplatte. Ebenso ein Paradies für Kinder ist der Spielplatz "Zum Kirchenpättchen" mit einer Größe von 376 m². Den Kindern steht auchder Spielplatz "Dorfplatz Schieferbenden" zur Verfügung. 
-                        Dieser Spielplatz hat eine Größe von 1374 m². Im Burghof befindet sich ein vierter Spielplatz, der hauptsächlich von den Schulkindern genutzt wird.</p>
-                </div>
-                <div class="article">
-                    <h3>Sportanlagen</h3>
-                    <h4>Schützenheim</h4>
-                        <p>In der Burg Birgel befindet sich ein Luftgewehrstand der St. Johannes Schützenbruderschaft Birgel 1851 e.V.</p>
-                    <h4>Sportplatz mit Sportheim</h4>
-                        <p>Der städtische Sportplatz umfasst einen Rasen- und einen Ascheplatz. Angrenzend an den Rasenplatz befindet sich das Sportheim.</p>
-                    <h4>Städtische Sporthalle</h4>
-                        <p>Die Sporthalle der Grundschule Burg Birgel hat eine Größe von 9,5 m x 12 m und wird von den Vereinen genutzt.</p>
+        <hr class="featurette-divider">
 
-                </div>
-                
-                <div class="article">
-                <h4>Erholungsflächen</h4>
-                        <p>Das freiliegende Birgel bietet viel Raum für lange Spaziergänge in der Natur. Mögliche Ziele sind der Staatsforst Gürzenich und der Park an der Burg Birgel.</p>
-                    <h4>Grillplätze</h4>
-                        <p>In Birgel befindet sich ein 120 m² großer Grillplatz mit einer Grillhütte und vier Tischen und acht Bänken, die fest im Boden verankert sind.</p>
-                    <h4>Löschgruppe Birgel</h4>
-                        <p>Die Löschgruppe der Freiwilligen Feuerwehr der Stadt Düren bildet zusammen mit den benachbarten Löschgruppen Derichsweiler und Gürzenich einen Löschzug.</p>
-                </div>
-
-                <div id="card-container" class="container-fluid">
-                    <div class="row justify-content-around">
-                        <div class="col-lg-3 col-md-5">
-                            <div class="card">
-                                <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
-                                class="card-img-top" alt="<?php echo base_url();?>assets/.">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="col-lg-3 col-md-5">
-                            <div class="card">
-                                <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270"
-                                class="card-img-top" alt="<?php echo base_url();?>assets/.">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="col-lg-3 col-md-5">
-                            <div class="card">
-                                <img src="https://media.istockphoto.com/photos/glad-to-work-with-you-picture-id951514270" class="card-img-top"
-                                    alt="<?php echo base_url();?>assets/.">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <a href="#" class="btn">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>               
-                    </div>
-                </div>
-
-                <div class="maps">
-                    <iframe src="https://www.google.com/maps/d/embed?mid=1BAs3uYRPmrrbAGQv4mncFwE80h3waeEc" width="640" height="480"></iframe>
-                </div>
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Spielplätze</h2>
+                <p class="lead">Auf vier Spielplätzen können die Kinder aus Birgel rutschen, klettern, schaukeln und toben. Der Spielplatz "Fliederbusch" bietet mit einer Größe von 820 m² alles, was das Kinderherz begehrt. Auf dem Spielplatz befindet sich auch eine Tischtennisplatte. Ebenso ein Paradies für Kinder ist der Spielplatz "Zum Kirchenpättchen" mit einer Größe von 376 m². Den Kindern steht auchder Spielplatz "Dorfplatz Schieferbenden" zur Verfügung. Dieser Spielplatz hat eine Größe von 1374 m². Im Burghof befindet sich ein vierter Spielplatz, der hauptsächlich von den Schulkindern genutzt wird.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-fluid mx-auto" src="<?php echo base_url();?>assets/pics/lebenundfreizeit/spielplatz.jpg" alt="Generic placeholder image">
             </div>
         </div>
-    
-        <footer>
-        <!-- Grid row-->
-    <div id="footer-menu" class="text-center d-flex justify-content-center pt-4">
 
-          <!-- Grid column -->
-          <div class="col-md-2 mb-3">
-              <h6 class="text-uppercase">
-                  <a href="#!">Impressum</a>
-              </h6>
-          </div>
-          <!-- Grid column -->
+        <hr class="featurette-divider">
 
-          <!-- Grid column -->
-          <div class="col-md-2 mb-3">
-              <h6 class="text-uppercase">
-                  <a href="#!">Datenschutz</a>
-              </h6>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-2 mb-3">
-            <h6 class="text-uppercase">
-              <a href="<?php echo base_url();?>kontakt">Kontakt</a>
-            </h6>
-          </div>
-          <!-- Grid column -->
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Sportanlagen</h2>
+                <p class="lead">Der städtische Sportplatz umfasst einen Rasen- und einen Ascheplatz. Angrenzend an den Rasenplatz befindet sich das Sportheim.
+                Die Sporthalle der Grundschule Burg Birgel hat eine Größe von 9,5 m x 12 m und wird von den Vereinen genutzt. 
+                In der Burg Birgel befindet sich ein Luftgewehrstand der St. Johannes Schützenbruderschaft Birgel 1851 e.V.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img class="featurette-image img-fluid mx-auto" src="<?php echo base_url();?>assets/pics/lebenundfreizeit/sportplatz.jpg" alt="Generic placeholder image">
+            </div>
         </div>
-        
-        <div id="footer-copyright" class="footer-copyright text-center py-3" >© 2020 Copyright:
-            <a href="https://birgel.de/"> birgel.de</a>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Vereine<span class="text-muted"></span></h2>
+                <p class="lead">Im Jahr 2012 gehören der IG die folgenden Birgeler Vereine und Ortsgruppen an: Freiwillige Feuerwehr Düren, Löschgruppe Birgel, 
+St. Johannes Schützenbruderschaft Düren-Birgel 1851 e.V.,
+Karnevalsgesellschaft Böse Buben Birgel 1960 e.V.,
+Sportverein TUS Germania Birgel,
+Tambourcorps Alte Kameraden Birgel 1928 e.V.,
+Freunde der Feuerwehr Birgel e.V.,
+Jugendfreizeit Birgel e.V.,
+Angelverein Birgeler Karpfen,
+Maigesellschaft Birgel e.V.,
+Frauen- und Mütterverein Birgel,
+Förderverein Grundschule Burg Birgel,
+Förderverein Kindergarten Li-La-Launeburg,
+Pfarrgemeinderat Sankt Martin Birgel,
+VDK Birgel,
+FC Schnecke,
+CDU-Ortsverband Düren-West,
+SPD Ortsgruppe Birgel,
+AWO Birgel-Rölsdorf</p>
         </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-fluid mx-auto" src="<?php echo base_url();?>assets/pics/lebenundfreizeit/maifest.jpg" alt="Generic placeholder image">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Erholungsflächen. <span class="text-muted">Grillplatz und Bauernhof</span></h2>
+                <p class="lead">Das freiliegende Birgel bietet viel Raum für lange Spaziergänge in der Natur. Mögliche Ziele sind der Staatsforst Gürzenich und der Park an der Burg Birgel.
+                In Birgel befindet sich ein 120 m² großer Grillplatz mit einer Grillhütte und vier Tischen und acht Bänken, die fest im Boden verankert sind.<br>
+                Der Eckeberger Kinderbauernhof ist vormittags für Spielgruppen, Kindergärten und Schulklassen geöffnet. Nachmittags können dort Kindergeburtstage gefeiert werden. Seit mehreren Jahren haben Kinder zwischen zwei und zwölf Jahren auf dem idyllisch gelegenen Hof am Waldrand von Birgel die Möglichkeit, Tiere (u.a. Kühe, Ponys, Schafe, Ziegen, Meerschweinchen und Häschen) und Natur hautnah zu erleben. Es werden Planwagenfahrten angeboten, und die Strohspielescheune mit Trampolin lädt zum Klettern ein. Zwischendurch besteht die Möglichkeit, in einer gemütlichen Holzhütte zu picknicken.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img class="featurette-image img-fluid mx-auto" src="<?php echo base_url();?>assets/pics/lebenundfreizeit/bauernhof.jpg" alt="Generic placeholder image">
+            </div>
+        </div>
+
+        <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+    <!-- FOOTER --> 
+    <footer class="container">
+        <hr class="featurette-divider">    
+        <p class="float-right"><a href="#">Zum Seitenanfang</a></p>
+        <p>&copy; 2020 Birgel &middot; <a href="<?php echo base_url();?>impressum">Impressum</a> &middot; <a href="<?php echo base_url();?>datenschutz">Datenschutz</a></p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
