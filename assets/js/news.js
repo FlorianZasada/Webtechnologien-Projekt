@@ -48,7 +48,7 @@ $(() => {
 
     $('.delete-button').on('click', function() {
         const { id, img } = cardData(this);
-        $.post('events/deleteCard', { id, img }, () => window.location.reload());
+        $.post('news/deleteCard', { id, img }, () => window.location.reload());
     });
 
     $('.edit-button').on('click', function() {

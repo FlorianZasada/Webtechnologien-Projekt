@@ -53,20 +53,6 @@ textarea {
     border: none;
 }
 
-.card-container {
-    padding: 0;
-    overflow-x: hidden;
-    width: 100%;
-}
-
-.close-button {
-    background-color: #dedede;
-}
-
-.close-button:hover {
-    background-color: #cfcfcf;
-}
-
 #mainbody {
     margin: 0;
     width: 100%;
@@ -76,6 +62,12 @@ textarea {
     max-width: 1000px;
     min-width: 100px;
     border-radius: 0;
+}
+
+#card-container {
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 #content {
@@ -92,8 +84,16 @@ textarea {
     margin-left: 50px;
 }
 
+#close-button {
+    background-color: #dedede;
+}
+
+#close-button:hover {
+    background-color: #cfcfcf;
+}
+
 @media(max-width: 992px) {
-    .card-container {
+    #card-container {
         padding: 0 50px;
     }
 }

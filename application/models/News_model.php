@@ -1,6 +1,6 @@
 <?php
 
-class Event_model extends CI_Model {
+class News_model extends CI_Model {
     
     public function insertCard($title, $description, $img, $userid) {
         $data = array(
@@ -10,7 +10,7 @@ class Event_model extends CI_Model {
             'userid' => $userid
         );
 
-        $this->db->insert('eventcards', $data);
+        $this->db->insert('newscards', $data);
     }
 
     public function updateCard($id, $title, $description, $img) {
@@ -21,11 +21,11 @@ class Event_model extends CI_Model {
         );
 
         $this->db->where('id', $id);
-        $this->db->update('eventcards', array_filter($data, 'strlen'));
+        $this->db->update('newscards', array_filter($data, 'strlen'));
     }
     
     public function getAllCards() {
-        $query = $this->db->get('eventcards');
+        $query = $this->db->get('newscards');
 
         if($query->num_rows() > 0)
             return $query->result();
@@ -33,6 +33,6 @@ class Event_model extends CI_Model {
 
     public function deleteCardByID($id) {
         $this->db->where('id', $id);
-        $this->db->delete('eventcards');
+        $this->db->delete('newscards');
     }
 }
