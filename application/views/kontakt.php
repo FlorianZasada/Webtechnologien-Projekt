@@ -17,6 +17,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/main.css" />
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/events.css" />
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/colors.css">
+      
     <title>Birgel - Kontakt</title>
   </head>
   

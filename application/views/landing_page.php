@@ -16,10 +16,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/bootstrap.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/main.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/carousel.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/colors.css">
+
     <title>Birgel - Startseite</title>
   </head>
   
-  <body>
+  <body onload="$('#modalCookie1').modal()">
+
+    <!--Modal: modalCookie-->
+    <div class="modal fade top" id="modalCookie1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true" data-backdrop="true">
+      <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Body-->
+          <div class="modal-body">
+            <div class="row justify-content-center align-items-center">
+
+              <p class="pt-3 pr-2">We use cookies to improve your website experience</p>
+
+            </div>
+            
+            <div class="row justify-content-center">
+              <a href="<?php echo base_url();?>datenschutz" type="button" class="btn btn-primary cookie-btn">Learn more
+                <!--i class="fas fa-book ml-1"></i-->
+              </a>
+              <a type="button" class="cookie-btn btn btn-outline-primary waves-effect" data-dismiss="modal">Ok, thanks</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+    <!--Modal: modalCookie-->
   
 	<!-- Navigationsleiste -->
 	<nav class="navbar navbar-expand-md navbar-light bg-light">

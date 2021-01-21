@@ -15,6 +15,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/bootstrap.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/main.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/colors.css">
+      
     <title>Birgel - Impressum</title>
   </head>
   
