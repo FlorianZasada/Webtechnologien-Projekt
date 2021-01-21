@@ -21,33 +21,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <title>Birgel - Startseite</title>
   </head>
   
-  <body onload="$('#modalCookie1').modal()">
+  <body>
 
-    <!--Modal: modalCookie-->
-    <div class="modal fade top" id="modalCookie1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-      aria-hidden="true" data-backdrop="true">
-      <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
-        <!--Content-->
-        <div class="modal-content">
-          <!--Body-->
-          <div class="modal-body">
-            <div class="row justify-content-center align-items-center">
+  <!--Modal: modalCookie-->
+  <div class="modal fade top modalCookie" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Body-->
+        <div class="modal-body">
+          <div class="row justify-content-center align-items-center">
 
-              <p class="pt-3 pr-2">We use cookies to improve your website experience</p>
+            <p class="pt-3 pr-2">We use cookies to improve your website experience</p>
 
-            </div>
-            
-            <div class="row justify-content-center">
-              <a href="<?php echo base_url();?>datenschutz" type="button" class="btn btn-primary cookie-btn">Learn more
-                <!--i class="fas fa-book ml-1"></i-->
-              </a>
-              <a type="button" class="cookie-btn btn btn-outline-primary waves-effect" data-dismiss="modal">Ok, thanks</a>
-            </div>
+          </div>
+          
+          <div class="row justify-content-center">
+            <a href="<?php echo base_url();?>datenschutz" type="button" class="btn btn-primary cookie-btn">Learn more
+              <!--i class="fas fa-book ml-1"></i-->
+            </a>
+            <a type="button" class="cookie-btn btn btn-outline-primary waves-effect" data-dismiss="modal">Ok, thanks</a>
           </div>
         </div>
       </div>
-      <!--/.Content-->
     </div>
+    <!--/.Content-->
+  </div>
     <!--Modal: modalCookie-->
   
 	<!-- Navigationsleiste -->
@@ -214,9 +214,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <p class="float-right"><a href="#">Zum Seitenanfang</a></p>
         <p>&copy; 2020 Birgel &middot; <a href="<?php echo base_url();?>impressum">Impressum</a> &middot; <a href="<?php echo base_url();?>datenschutz">Datenschutz</a></p>
     </footer>
-      
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="<?=base_url();?>assets/js/cookies.js"></script>
   </body>
 </html>
