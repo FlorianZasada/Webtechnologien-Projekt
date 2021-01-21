@@ -6,6 +6,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html>
   <head>
       
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url();?>/assets/favicon.ico">
+      
 	<!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,13 +16,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/bootstrap.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/main.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/carousel.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/colors.css">
+
     <title>Birgel - Startseite</title>
   </head>
   
-  <body>
+  <body onload="$('#modalCookie1').modal()">
+
+    <!--Modal: modalCookie-->
+    <div class="modal fade top" id="modalCookie1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true" data-backdrop="true">
+      <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Body-->
+          <div class="modal-body">
+            <div class="row justify-content-center align-items-center">
+
+              <p class="pt-3 pr-2">We use cookies to improve your website experience</p>
+
+            </div>
+            
+            <div class="row justify-content-center">
+              <a href="<?php echo base_url();?>datenschutz" type="button" class="btn btn-primary cookie-btn">Learn more
+                <!--i class="fas fa-book ml-1"></i-->
+              </a>
+              <a type="button" class="cookie-btn btn btn-outline-primary waves-effect" data-dismiss="modal">Ok, thanks</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+    <!--Modal: modalCookie-->
   
 	<!-- Navigationsleiste -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="<?php echo base_url();?>assets/pics/Wappen_Birgel_Dueren.png" width="46" height="60" class="d-inline-block align-top" alt="">
@@ -122,24 +153,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </a>
       </div>
       
-    
+        <div class="container marketing">
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Herzlich Willkommen!</h2>
+                <p class="lead">Der Bezirk Birgel gehört zu der Kreisstadt Düren und ist trotz der kleinen Fläche von 4,46km2 ein interessanter Ort, der mit seinen 1.766 Einwohnern (stand 31. Dezember 2019) auch besonders für seine städtischen Vereine bekannt ist: Vereinsleben.</p>
+                <p class="lead">Birgel liegt etwa 5km südwestlich des Dürener Stadtzentrums und ist daher eine perfekte Mischung aus Ruhe und Stadtleben. Mit der ehemaligen Wasserburg, die heutzutage als Grundschule genutzt wird, hat Birgel eine sagenhafte und exklusive Sehenswürdigkeit: Leben/Freizeit</p>
+                <p class="lead">Die Historie, die den Gebäude dieses Bezirks in den Wänden liegt ist auch in den dörflichen Straßenzügen mit vereinzelten Fachwerkhäusern erkennbar. Daher formt Birgel eine gemütliche Atmosphäre und lädt zu Besuchen ein.</p>
+                <p class="lead">Um mehr über Birgel erfahren zu können, bietet diese Internetseite alle möglichen Informationen rund um den Bezirk.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-fluid mx-auto" src="<?php echo base_url();?>assets/pics/lebenundfreizeit/spielplatz.jpg" alt="Generic placeholder image">
+            </div>
+            </div>
+        </div>
+            
+      
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div id="description">
-                    <h1>Herzlich Willkommen...</h1>
-                    <p>Der Bezirk Birgel gehört zu der Kreisstadt Düren und ist trotz der kleinen Fläche von 4,46km2 ein interessanter Ort, der mit seinen 1.766 Einwohnern (stand 31. Dezember 2019) auch besonders für seine städtischen Vereine bekannt ist: Vereinsleben</p>
-                </div>
+                
 
-                <div class="article">
-                    <p>Birgel liegt etwa 5km südwestlich des Dürener Stadtzentrums und ist daher eine perfekte Mischung aus Ruhe und Stadtleben. Mit der ehemaligen Wasserburg, die heutzutage als Grundschule genutzt wird, hat Birgel eine sagenhafte und exklusive Sehenswürdigkeit: Leben/Freizeit</p>
-                </div>
-
-                <div class="article">
-                    <p>Die Historie, die den Gebäude dieses Bezirks in den Wänden liegt ist auch in den dörflichen Straßenzügen mit vereinzelten Fachwerkhäusern erkennbar. Daher formt Birgel eine gemütliche Atmosphäre und lädt zu Besuchen ein.</p>
-                </div>
-                <div class="article">
-                    <p>Um mehr über Birgel erfahren zu können, bietet diese Internetseite alle möglichen Informationen rund um den Bezirk.</p>
-                </div>
+                
             </div>
         </div>
 
@@ -166,13 +204,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
 
-        
+        </div>
     </div><!-- /.row -->              
 
     
     <!-- FOOTER --> 
     <footer class="container">
-        <hr class="featurette-divider">    
+        <hr class="featurette-divider">
         <p class="float-right"><a href="#">Zum Seitenanfang</a></p>
         <p>&copy; 2020 Birgel &middot; <a href="<?php echo base_url();?>impressum">Impressum</a> &middot; <a href="<?php echo base_url();?>datenschutz">Datenschutz</a></p>
     </footer>

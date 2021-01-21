@@ -54,6 +54,11 @@ a:visited {
     z-index: 3;*/
 }
 
+.cookie-btn {
+    margin-left: 100px;
+    margin-right: 5rem;
+}
+
 .banner {
     width: 100%;
     height: 150px;

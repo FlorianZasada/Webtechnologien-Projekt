@@ -6,6 +6,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html>
   <head>
       
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url();?>/assets/favicon.ico">
+      
 	<!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,13 +15,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/bootstrap.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/main.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/colors.css">
+      
     <title>Birgel - Impressum</title>
   </head>
   
   <body>
   
 	<!-- Navigationsleiste -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="<?php echo base_url();?>assets/pics/Wappen_Birgel_Dueren.png" width="46" height="60" class="d-inline-block align-top" alt="">
