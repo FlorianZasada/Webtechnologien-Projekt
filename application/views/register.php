@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!--Die lokale URL liefert uns PHP: base_url(); -->
 <!--An die base_url müssen wir noch den Controller anhängen -->
 <!--Beispiel:  <a class="nav-link" href="[bae_url]login">Login</a> ruft den Login-Controller auf-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="<?php echo base_url();?>assets/pics/Wappen_Birgel_Dueren.png" width="46" height="60" class="d-inline-block align-top" alt="">

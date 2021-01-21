@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <body>
   
 	<!-- Navigationsleiste -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="<?php echo base_url();?>assets/pics/Wappen_Birgel_Dueren.png" width="46" height="60" class="d-inline-block align-top" alt="">
