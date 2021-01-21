@@ -1,12 +1,8 @@
 $(() => {
     const cname = "acceptsCookies";
-    if(!getCookie(cname))
-        $(".modalCookie").modal();
+    if(!getCookie(cname)) $(".modalCookie").modal();
 
     $('.cookie-btn').click( () => setCookie(cname, 'true', 36500));
-
-    
-    console.log(getCookie(cname))
 });
 
 function setCookie(cname, cvalue, exdays) {
