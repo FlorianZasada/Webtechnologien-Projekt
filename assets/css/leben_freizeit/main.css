@@ -88,6 +88,10 @@ a:visited {
     padding-bottom: 20px;
 }
 
+#carousel-ding {
+    background-color: #666;
+}
+
 
 .article {
     width: 100%;
@@ -143,11 +147,25 @@ a:visited {
   width: 100%;
 }
 
+.btt-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+}
+
 @media (max-width: 400px) {
-  .preview-card {
-    -ms-flex-preferred-size: 0;
-    flex-basis: 0;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    max-width: 100%;
+    .preview-card {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+
+    }
+
+    .btt-btn {
+        display: none;
+    }
+
+    
 }

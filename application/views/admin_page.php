@@ -20,11 +20,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </head>
   
   <body>
-  
+    
+    <!--Modal: modalCookie-->
+  <div class="modal fade top modalCookie" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Body-->
+        <div class="modal-body">
+          <div class="row justify-content-center align-items-center">
+
+            <p class="pt-3 pr-2">Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu. Weitere Informationen zu Cookies erhalten Sie in unserer Datenschutzerklärung.</p>
+
+          </div>
+          
+          <div class="row justify-content-center">
+            <a href="<?php echo base_url();?>datenschutz" type="button" class="btn btn-primary cookie-btn">Mehr Informationen
+              <!--i class="fas fa-book ml-1"></i-->
+            </a>
+            <a type="button" class="cookie-btn btn btn-outline-primary waves-effect" data-dismiss="modal">Alles klar!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+    <!--Modal: modalCookie-->
+
 	<!-- Navigationsleiste -->
 	<nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="<?php echo base_url();?>home">
                 <img src="<?php echo base_url();?>assets/pics/Wappen_Birgel_Dueren.png" width="46" height="60" class="d-inline-block align-top" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,27 +91,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </li>
                 </ul>
                 <span class="navbar-text">
-                    <?=$this->session->userdata('name');?> 
+                    <strong><?=$this->session->userdata('name');?></strong>
                 </span>
                 <?php endif;?>
             </div>
         </div>
 	</nav>
-  
+  <br>
   <!-- Main Content -->
   <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div id="description">
                     <h1>Adminpanel</h1>
                 </div>
 
                 <div class="article">
-                    <p>Nutzerverwaltung und allgemeine Einstellungen</p>
+                    <h4>Nutzerverwaltung und allgemeine Einstellungen</h4>
                 </div>
             </div>
         </div>
-        <form>
+        <form><br>
             <div class="form-group col-md-4">
             <label for="inputState">Benutzer auswählen:</label>
             <select id="inputState" class="form-control">
@@ -115,10 +142,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- FOOTER --> 
     <footer class="container">
-        <hr class="featurette-divider">    
-        <p class="float-right"><a href="#">Zum Seitenanfang</a></p>
+        <hr class="featurette-divider">
         <p>&copy; 2020 Birgel &middot; <a href="<?php echo base_url();?>impressum">Impressum</a> &middot; <a href="<?php echo base_url();?>datenschutz">Datenschutz</a></p>
     </footer>
+
+    <a class="btn btn-primary btt-btn" href="#">Zum Seitenanfang</a>
     <script src="<?=base_url();?>assets/js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

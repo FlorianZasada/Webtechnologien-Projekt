@@ -40,9 +40,9 @@ button.bg-primary:focus {
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #15b95b;
-    border-color: #15b95b;
+    color: #fff !important;
+    background-color: #15b95b !important;
+    border-color: #15b95b !important;
 }
 
 .btn-primary:hover {
