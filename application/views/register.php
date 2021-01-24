@@ -77,7 +77,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!--Main Layout-->
 <main class="text-center py-5">
 
-<div class="container">
+<div class="container col-sm-5">
   <br />
   <h3 align="center">Registriere Dich bei Birgel.de!</h3>
   <br />

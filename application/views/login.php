@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!--Main Layout-->
 <main class="text-center py-5">
 
-<div class="container">
+    <div class="container col-sm-5">
         <br />
         <h3 align="center">Melde Dich auf Birgel.de an!</h3>
         <br />
@@ -114,12 +114,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <!-- 2 Buttons für Login und Register (Register ruft Controller auf) --> 
                     <div class="form-group">
                         <input type="submit" name="login" value="Login" class="btn btn-info" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo base_url(); ?>register">Register</a>
-                    </div>                 
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-
+    
 </main>
     <!-- FOOTER --> 
     <footer class="container">
