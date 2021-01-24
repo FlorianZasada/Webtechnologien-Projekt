@@ -33,15 +33,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="modal-body">
           <div class="row justify-content-center align-items-center">
 
-            <p class="pt-3 pr-2">We use cookies to improve your website experience</p>
+            <p class="pt-3 pr-2">Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu. Weitere Informationen zu Cookies erhalten Sie in unserer Datenschutzerklärung.</p>
 
           </div>
           
           <div class="row justify-content-center">
-            <a href="<?php echo base_url();?>datenschutz" type="button" class="btn btn-primary cookie-btn">Learn more
+            <a href="<?php echo base_url();?>datenschutz" type="button" class="btn btn-primary cookie-btn">Mehr Informationen
               <!--i class="fas fa-book ml-1"></i-->
             </a>
-            <a type="button" class="cookie-btn btn btn-outline-primary waves-effect" data-dismiss="modal">Ok, thanks</a>
+            <a type="button" class="cookie-btn btn btn-outline-primary waves-effect" data-dismiss="modal">Alles klar!</a>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!-- Navigationsleiste -->
 	<nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="<?php echo base_url();?>home">
                 <img src="<?php echo base_url();?>assets/pics/Wappen_Birgel_Dueren.png" width="46" height="60" class="d-inline-block align-top" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,7 +95,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <?php endif;?>
                 </ul>
                 <span class="navbar-text">
-                    <?=$this->session->userdata('name');?> 
+                  <strong><?=$this->session->userdata('name');?></strong>
                 </span>
                 <?php endif;?>
             </div>
@@ -115,31 +115,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="carousel-item active">
             <img class="first-slide" src="<?php echo base_url();?>assets/pics/carousel1.jpg" alt="First slide">
             <div class="container">
-              <div class="carousel-caption text-left">
-                <h1>Example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                <div class="carousel-caption text-left carousel-ding">
+                <div class= "carousel-caption-outer">
+                  <h1>Leben und Freizeit</h1>
+                  <p>Lernen Sie jetzt den Bezirk Birgel kennen und schauen Sie doch mal vorbei!</p>
+                  <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>leben_freizeit"" role="button">zu Leben und Freizeit</a></p>
+                </div>
               </div>
             </div>
           </div>
           <div class="carousel-item">
             <img class="second-slide" src="<?php echo base_url();?>assets/pics/carousel2.jpg" alt="Second slide">
             <div class="container">
-              <div class="carousel-caption">
-                <h1>Another example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            <div class= "carousel-caption-outer">
+              <div class="carousel-caption carousel-ding">
+    
+                <h1>Events</h1>
+                <p>Seien Sie immer auf den neusten Stand und erfahren Sie, was aktuell in Birgel los ist!</p>
+                <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>events"" role="button">zu Events</a></p>
               </div>
+                    </div>
             </div>
           </div>
           <div class="carousel-item">
             <img class="third-slide" src="<?php echo base_url();?>assets/pics/carousel3.jpg" alt="Third slide">
             <div class="container">
-              <div class="carousel-caption text-right">
-                <h1>One more for good measure.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+            <div class= "carousel-caption-outer">
+              <div class="carousel-caption text-right carousel-ding">
+                <h1>News</h1>
+                <p>Aktuelle Nachrichten aus dem Bezirk und Umfeld immer auf einen Klick abrufbar.</p>
+                <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>news"" role="button">zu News</a></p>
               </div>
+                    </div>
             </div>
           </div>
         </div>
@@ -167,7 +174,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <p class="lead">Um mehr über Birgel erfahren zu können, bietet diese Internetseite alle möglichen Informationen rund um den Bezirk.</p>
             </div>
             <div class="col-md-5">
-                <img class="featurette-image img-fluid mx-auto" src="<?php echo base_url();?>assets/pics/lebenundfreizeit/spielplatz.jpg" alt="Generic placeholder image">
+                <img class="featurette-image img-fluid mx-auto" id='luftbild' src="<?php echo base_url();?>assets/pics/startseite/birgel_luftbild.jpg" alt="Generic placeholder image">
             </div>
             </div>
         </div>
@@ -186,22 +193,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- Three columns of text below the carousel -->
         <div class="row">
         <div class="col-lg-4">
-            <img class="rounded-circle" src="<?php echo base_url();?>assets/pics/lebenundfreizeit/maifest.jpg" alt="Generic placeholder image" width="140" height="140">
+            <a href="<?php echo base_url();?>events""><img class="rounded-circle" src="<?php echo base_url();?>assets/pics/lebenundfreizeit/maifest.jpg" alt="Generic placeholder image" width="140" height="140"></a>
             <h2>Veranstaltungen</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <p>Klicken Sie hier, um die aktuellsten Veranstaltungen und udn Freizeitangebote im Bezirk zu entdecken.</p>
+            <p><a class="btn btn-primary" href="<?php echo base_url();?>events" role="button">Zu Veranstaltungen &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-            <img class="rounded-circle" src="<?php echo base_url();?>assets/pics/lebenundfreizeit/sportplatz.jpg" alt="Generic placeholder image" width="140" height="140">
+            <a href="<?php echo base_url();?>news"><img class="rounded-circle" src="<?php echo base_url();?>assets/pics/lebenundfreizeit/sportplatz.jpg" alt="Generic placeholder image" width="140" height="140"></a>
             <h2>News</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <p>Seien Sie immer auf dem neusten Stand, was sich in Birgel und der Umgebung passiert. Verpassen Sie nichts mehr.</p>
+            <p><a class="btn btn-primary" href="<?php echo base_url();?>news" role="button">Zu News &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-            <img class="rounded-circle" src="<?php echo base_url();?>assets/pics/lebenundfreizeit/bauernhof.jpg" alt="Generic placeholder image" width="140" height="140">
+            <a href="<?php echo base_url();?>leben_freizeit"><img class="rounded-circle" src="<?php echo base_url();?>assets/pics/lebenundfreizeit/bauernhof.jpg" alt="Generic placeholder image" width="140" height="140"></a>
             <h2>Erholungsflächen</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <p>Tauchen Sie tiefer in die Idylle des Bezirks und finden Sie die besten Erholungsflächen.</p>
+            <p><a class="btn btn-primary" href="<?php echo base_url();?>leben_freizeit" role="button">Zu Leben und Freizeit &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
 
         </div>
@@ -211,9 +218,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- FOOTER --> 
     <footer class="container">
         <hr class="featurette-divider">
-        <p class="float-right"><a href="#">Zum Seitenanfang</a></p>
         <p>&copy; 2020 Birgel &middot; <a href="<?php echo base_url();?>impressum">Impressum</a> &middot; <a href="<?php echo base_url();?>datenschutz">Datenschutz</a></p>
     </footer>
+
+    <a class="btn btn-primary btt-btn" href="#">Zum Seitenanfang</a>
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

@@ -23,10 +23,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </head>
   
   <body>
+
+    <!--Modal: modalCookie-->
+  <div class="modal fade top modalCookie" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Body-->
+        <div class="modal-body">
+          <div class="row justify-content-center align-items-center">
+
+            <p class="pt-3 pr-2">Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu. Weitere Informationen zu Cookies erhalten Sie in unserer Datenschutzerklärung.</p>
+
+          </div>
+          
+          <div class="row justify-content-center">
+            <a href="<?php echo base_url();?>datenschutz" type="button" class="btn btn-primary cookie-btn">Learn more
+              <!--i class="fas fa-book ml-1"></i-->
+            </a>
+            <a type="button" class="cookie-btn btn btn-outline-primary waves-effect" data-dismiss="modal">Ok, thanks</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+    <!--Modal: modalCookie-->
+
     <!-- Navigationsleiste -->
 	<nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="<?php echo base_url();?>home">
                 <img src="<?php echo base_url();?>assets/pics/Wappen_Birgel_Dueren.png" width="46" height="60" class="d-inline-block align-top" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </li>
                 </ul>
                 <span class="navbar-text">
-                    <?=$this->session->userdata('name');?> 
+                    <strong><?=$this->session->userdata('name');?></strong>
                 </span>
                 <?php endif;?>
             </div>
@@ -74,7 +102,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </nav><br><br>
     
 
-        <form>    
+        <form>
             <div class="container">
                 <h1> Kontaktformular </h1><br>  
                  <h3>Ihre Nachricht an die Gemeindevertretung </h3><br>
@@ -157,8 +185,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     
    <!-- FOOTER --> 
    <footer class="container">
-        <hr class="featurette-divider">    
-        <p class="float-right"><a href="#">Zum Seitenanfang</a></p>
+        <hr class="featurette-divider">
         <p>&copy; 2020 Birgel &middot; <a href="<?php echo base_url();?>impressum">Impressum</a> &middot; <a href="<?php echo base_url();?>datenschutz">Datenschutz</a></p>
     </footer>
       

@@ -54,6 +54,21 @@ a:visited {
     z-index: 3;*/
 }
 
+.carousel-ding {
+    border-radius: 5px;
+    background-color: #0008;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0;
+    width:50%;
+    margin:0 auto; 
+}
+
+.carousel-caption-outer {
+    width:100%;
+}
+
 .cookie-btn {
     margin-left: 100px;
     margin-right: 5rem;
@@ -148,11 +163,29 @@ a:visited {
   width: 100%;
 }
 
+.btt-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+}
+
 @media (max-width: 400px) {
-  .preview-card {
-    -ms-flex-preferred-size: 0;
-    flex-basis: 0;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    max-width: 100%;
+    .preview-card {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+
+    }
+}
+
+@media (max-width: 767px) {
+    .btt-btn {
+        display: none;
+    }
+}
+
+#luftbild {
+    margin-top: 12ex;
 }
