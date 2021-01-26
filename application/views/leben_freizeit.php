@@ -14,10 +14,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/bootstrap.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/leben_freizeit/main.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/leben_freizeit/leben_freizeit.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/carousel.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/startseite/main.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/colors.css">
 
     <title>Birgel - Leben und Freizeit</title>
@@ -25,10 +25,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   
   <body>
   
+  <!--Modal: modalCookie-->
+  <div class="modal fade top modalCookie" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Body-->
+        <div class="modal-body">
+          <div class="row justify-content-center align-items-center">
+
+            <p class="pt-3 pr-2">Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu. Weitere Informationen zu Cookies erhalten Sie in unserer Datenschutzerklärung.</p>
+
+          </div>
+          
+          <div class="row justify-content-center">
+            <a href="<?php echo base_url();?>datenschutz" type="button" class="btn btn-primary cookie-btn">Mehr Informationen
+              <!--i class="fas fa-book ml-1"></i-->
+            </a>
+            <a type="button" class="cookie-btn btn btn-outline-primary waves-effect" data-dismiss="modal">Alles klar!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+    <!--Modal: modalCookie-->
+
 	<!-- Navigationsleiste -->
 	<nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="<?php echo base_url();?>home">
                 <img src="<?php echo base_url();?>assets/pics/Wappen_Birgel_Dueren.png" width="46" height="60" class="d-inline-block align-top" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,7 +97,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <?php endif;?>
                 </ul>
                 <span class="navbar-text">
-                    <?=$this->session->userdata('name');?> 
+                  <strong><?=$this->session->userdata('name');?></strong>
                 </span>
                 <?php endif;?>
             </div>
@@ -88,31 +115,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="carousel-item active">
             <img class="first-slide" src="<?php echo base_url();?>assets/pics/carousel1.jpg" alt="First slide">
             <div class="container">
-              <div class="carousel-caption text-left">
-                <h1>Example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                <div class="carousel-caption text-left carousel-ding">
+                <div class= "carousel-caption-outer">
+                  <h1>Leben und Freizeit</h1>
+                  <p>Lernen Sie jetzt den Bezirk Birgel kennen und schauen Sie doch mal vorbei!</p>
+                  <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>leben_freizeit"" role="button">zu Leben und Freizeit</a></p>
+                </div>
               </div>
             </div>
           </div>
           <div class="carousel-item">
             <img class="second-slide" src="<?php echo base_url();?>assets/pics/carousel2.jpg" alt="Second slide">
             <div class="container">
-              <div class="carousel-caption">
-                <h1>Another example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            <div class= "carousel-caption-outer">
+              <div class="carousel-caption carousel-ding">
+    
+                <h1>Events</h1>
+                <p>Seien Sie immer auf den neusten Stand und erfahren Sie, was aktuell in Birgel los ist!</p>
+                <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>events"" role="button">zu Events</a></p>
               </div>
+                    </div>
             </div>
           </div>
           <div class="carousel-item">
             <img class="third-slide" src="<?php echo base_url();?>assets/pics/carousel3.jpg" alt="Third slide">
             <div class="container">
-              <div class="carousel-caption text-right">
-                <h1>One more for good measure.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+            <div class= "carousel-caption-outer">
+              <div class="carousel-caption text-right carousel-ding">
+                <h1>News</h1>
+                <p>Aktuelle Nachrichten aus dem Bezirk und Umfeld immer auf einen Klick abrufbar.</p>
+                <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>news"" role="button">zu News</a></p>
               </div>
+                    </div>
             </div>
           </div>
         </div>
@@ -127,7 +161,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
 
     <div class="container marketing">
-        <h1>Leben und Freizeit</h1>
         <!-- START THE FEATURETTES -->
 
         <hr class="featurette-divider">
@@ -205,10 +238,11 @@ AWO Birgel-Rölsdorf</p>
 
     <!-- FOOTER --> 
     <footer class="container">
-        <hr class="featurette-divider">    
-        <p class="float-right"><a href="#">Zum Seitenanfang</a></p>
+        <hr class="featurette-divider">
         <p>&copy; 2020 Birgel &middot; <a href="<?php echo base_url();?>impressum">Impressum</a> &middot; <a href="<?php echo base_url();?>datenschutz">Datenschutz</a></p>
     </footer>
+
+    <a class="btn btn-primary btt-btn" href="#">Zum Seitenanfang</a>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

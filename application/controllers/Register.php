@@ -82,7 +82,7 @@ class Register extends CI_Controller {
         $this->session->set_flashdata('message','Registrierung erfolgreich.');
 
         //AUFGABE: geben Sie die Kontrolle zurück an den Start-Controller (home): redirect('name des ziels');
-        redirect('home');
+        redirect('login');
     }
     else
     {
