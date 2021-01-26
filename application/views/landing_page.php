@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="modal-body">
           <div class="row justify-content-center align-items-center">
 
-            <p class="pt-3 pr-2">Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu. Weitere Informationen zu Cookies erhalten Sie in unserer Datenschutzerklärung.</p>
+            <p class="cookie-text">Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu. Weitere Informationen zu Cookies erhalten Sie in unserer <a href="<?php echo base_url();?>datenschutz">Datenschutzerklärung.</a></p>
 
           </div>
           
@@ -119,7 +119,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class= "carousel-caption-outer">
                   <h1>Leben und Freizeit</h1>
                   <p>Lernen Sie jetzt den Bezirk Birgel kennen und schauen Sie doch mal vorbei!</p>
-                  <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>leben_freizeit"" role="button">zu Leben und Freizeit</a></p>
+                  <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>leben_freizeit" role="button">zu Leben und Freizeit</a></p>
                 </div>
               </div>
             </div>
@@ -132,7 +132,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     
                 <h1>Events</h1>
                 <p>Seien Sie immer auf den neusten Stand und erfahren Sie, was aktuell in Birgel los ist!</p>
-                <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>events"" role="button">zu Events</a></p>
+                <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>events" role="button">zu Events</a></p>
               </div>
                     </div>
             </div>
@@ -144,9 +144,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="carousel-caption text-right carousel-ding">
                 <h1>News</h1>
                 <p>Aktuelle Nachrichten aus dem Bezirk und Umfeld immer auf einen Klick abrufbar.</p>
-                <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>news"" role="button">zu News</a></p>
+                <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>news" role="button">zu News</a></p>
               </div>
-                    </div>
+            </div>
             </div>
           </div>
         </div>
@@ -193,9 +193,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- Three columns of text below the carousel -->
         <div class="row">
         <div class="col-lg-4">
-            <a href="<?php echo base_url();?>events""><img class="rounded-circle" src="<?php echo base_url();?>assets/pics/lebenundfreizeit/maifest.jpg" alt="Generic placeholder image" width="140" height="140"></a>
+            <a href="<?php echo base_url();?>events"><img class="rounded-circle" src="<?php echo base_url();?>assets/pics/lebenundfreizeit/maifest.jpg" alt="Generic placeholder image" width="140" height="140"></a>
             <h2>Veranstaltungen</h2>
-            <p>Klicken Sie hier, um die aktuellsten Veranstaltungen und udn Freizeitangebote im Bezirk zu entdecken.</p>
+            <p>Klicken Sie hier, um die aktuellsten Veranstaltungen und und Freizeitangebote im Bezirk zu entdecken.</p>
             <p><a class="btn btn-primary" href="<?php echo base_url();?>events" role="button">Zu Veranstaltungen &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">

@@ -38,7 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="modal-body">
           <div class="row justify-content-center align-items-center">
 
-            <p class="pt-3 pr-2">Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu. Weitere Informationen zu Cookies erhalten Sie in unserer Datenschutzerklärung.</p>
+            <p class="cookie-text">Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu. Weitere Informationen zu Cookies erhalten Sie in unserer <a href="<?php echo base_url();?>datenschutz">Datenschutzerklärung.</a></p>
 
           </div>
           
@@ -121,7 +121,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="carousel-caption text-left carousel-ding">
                 <h1>Leben und Freizeit</h1>
                 <p>Lernen Sie jetzt den Bezirk Birgel kennen und schauen Sie doch mal vorbei!</p>
-                <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>leben_freizeit"" role="button">zu Leben und Freizeit</a></p>
+                <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>leben_freizeit" role="button">zu Leben und Freizeit</a></p>
               </div>
             </div>
           </div>
@@ -131,7 +131,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="carousel-caption carousel-ding">
                 <h1>Events</h1>
                 <p>Seien Sie immer auf den neusten Stand und erfahren Sie, was aktuell in Birgel los ist!</p>
-                <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>events"" role="button">zu Events</a></p>
+                <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>events" role="button">zu Events</a></p>
               </div>
             </div>
           </div>
@@ -141,7 +141,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="carousel-caption text-right carousel-ding">
                 <h1>News</h1>
                 <p>Aktuelle Nachrichten aus dem Bezirk und Umfeld immer auf einen Klick abrufbar.</p>
-                <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>news"" role="button">zu News</a></p>
+                <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>news" role="button">zu News</a></p>
               </div>
             </div>
           </div>
