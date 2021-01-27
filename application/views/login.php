@@ -138,8 +138,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="form-group">
                         <input type="submit" name="login" value="Login" class="btn btn-primary" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="<?php echo base_url(); ?>register">Registrieren</a>
-                    </div>                 
-                </div>
+                    </div> 
+                </form>
             </div>
         </div>
     </div>
